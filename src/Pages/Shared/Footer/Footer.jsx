@@ -9,7 +9,7 @@ const Footer = () => {
   const year = today.getFullYear();
   return (
     <div className="  text-white">
-      <div className="lg:py-20 py-16 footer-bg grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 lg:px-6 px-3">
+      <div className="lg:py-20 py-16 footer-bg grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 lg:px-6 px-3 lg:gap-5 gap-3">
         <div className="">
           <Link to="/">
             <img className="lg:w-6/12 mb-6" src={footerLogo} alt="" />
@@ -19,8 +19,20 @@ const Footer = () => {
             the U.S. economy. Machinery industries provide essential and highly.
           </p>
         </div>
-        <div>
-          <h4 className="text-xl font-semibold underline">Information</h4>
+        <div className="duration-500">
+          <h4 className="text-xl mb-4 font-semibold underline">Information</h4>
+          <Link to="/" className="block hover:text-orange-400 duration-300">
+            Our Company
+          </Link>
+          <Link to="/" className="block hover:text-orange-400 duration-300">
+            Our Company
+          </Link>
+          <Link to="/" className="block hover:text-orange-400 duration-300">
+            Our Company
+          </Link>
+          <Link to="/" className="block hover:text-orange-400 duration-300">
+            Our Company
+          </Link>
         </div>
       </div>
       <div className="bg-black">
