@@ -38,9 +38,9 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <a class="md:w-4/12 w-4/12 normal-case text-xl">
+        <Link to="/" class="md:w-4/12 w-4/12 normal-case text-xl">
           <img src={logo} alt="" />
-        </a>
+        </Link>
       </div>
       <div class="justify-between hidden lg:flex ">
         <ul class="menu menu-horizontal p-0  font-semibold uppercase">
