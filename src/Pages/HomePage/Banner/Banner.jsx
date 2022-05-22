@@ -8,7 +8,7 @@ const Banner = () => {
           <h4 className="primary-color lg:text-3xl md:text-2xl text-xl ">
             NEW TECHNOLOGY & BUILD
           </h4>
-          <h1 className="md:text-7xl text-2xl font-bold primary-color">
+          <h1 className="md:text-7xl text-2xl font-bold primary-color md:my-6 my-2">
             WHEELS & TIRES <br /> COLLECTIONS
           </h1>
           <button className="btn glass">Shop NOW</button>

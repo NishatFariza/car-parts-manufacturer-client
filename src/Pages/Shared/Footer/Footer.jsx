@@ -55,7 +55,7 @@ const Footer = () => {
               Career
             </Link>
           </div>
-          <div className="duration-500">
+          <div className="duration-500 lg:w-auto w-full">
             <h4 className="text-xl mb-4 font-semibold underline lg:mt-auto mt-3">
               Quicklink
             </h4>
@@ -87,7 +87,7 @@ const Footer = () => {
               Contact
             </Link>
           </div>
-          <div className="duration-500">
+          <div className="duration-500 lg:w-auto w-full">
             <h4 className="text-xl mb-4 font-semibold underline lg:mt-auto mt-3">
               Store Information
             </h4>

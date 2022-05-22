@@ -25,30 +25,33 @@ const Header = () => {
           </label>
           <ul
             tabindex="0"
-            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 "
+            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-semibold uppercase"
           >
             <li>
-              <a>Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a>About</a>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/login">Log In</Link>
             </li>
           </ul>
         </div>
-        <a class="lg:w-4/12 normal-case text-xl">
+        <a class="md:w-4/12 w-4/12 normal-case text-xl">
           <img src={logo} alt="" />
         </a>
       </div>
       <div class="justify-between hidden lg:flex ">
-        <ul class="menu menu-horizontal p-0">
+        <ul class="menu menu-horizontal p-0  font-semibold uppercase">
           <li>
-            <a>Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a>About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to='/'>Log In</Link>
+            <Link to="/login">Log In</Link>
           </li>
         </ul>
       </div>
