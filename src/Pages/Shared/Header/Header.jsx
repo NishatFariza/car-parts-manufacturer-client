@@ -5,7 +5,7 @@ import logo from "../../../images/logo.png";
 const Header = () => {
   return (
     <div class="navbar bg-base-100">
-      <div class=" flex justify-between">
+      <div class="flex justify-between">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost lg:hidden">
             <svg
@@ -25,7 +25,7 @@ const Header = () => {
           </label>
           <ul
             tabindex="0"
-            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 "
           >
             <li>
               <a>Home</a>
@@ -35,11 +35,11 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <a class=" w-4/12 normal-case text-xl">
+        <a class="lg:w-4/12 normal-case text-xl">
           <img src={logo} alt="" />
         </a>
       </div>
-      <div class="justify-between hidden lg:flex">
+      <div class="justify-between hidden lg:flex ">
         <ul class="menu menu-horizontal p-0">
           <li>
             <a>Home</a>
