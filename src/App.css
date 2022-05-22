@@ -8,3 +8,6 @@ body, a{
 h1, h2, h3, h4, h5, h6{
   font-family: 'Oswald', sans-serif;
 }
+.primary-color{
+  color: #d8d8d8;
+}
