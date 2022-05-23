@@ -6,6 +6,9 @@ const Header = () => {
   return (
     <div class="navbar bg-base-100">
       <div class="flex justify-between">
+      <Link to="/" class="md:w-4/12 w-4/12 normal-case text-xl">
+          <img src={logo} alt="" />
+        </Link>
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost lg:hidden">
             <svg
@@ -27,8 +30,8 @@ const Header = () => {
             tabindex="0"
             class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-semibold uppercase"
           >
-            <li>
-              <Link to="/">Home</Link>
+            <li >
+              <Link className="active:bg-none focus:outline-none" to="/">Home</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -38,14 +41,12 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <Link to="/" class="md:w-4/12 w-4/12 normal-case text-xl">
-          <img src={logo} alt="" />
-        </Link>
+        
       </div>
       <div class="justify-between hidden lg:flex ">
         <ul class="menu menu-horizontal p-0  font-semibold uppercase">
-          <li>
-            <Link to="/">Home</Link>
+          <li >
+            <Link className="bg-none focus:outline-none" to="/">Home</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
