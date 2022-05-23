@@ -4,9 +4,9 @@ import logo from "../../../images/logo.png";
 
 const Header = () => {
   return (
-    <div class="navbar bg-base-100">
+    <div class="navbar bg-base-100 px-16">
       <div class="flex justify-between">
-      <Link to="/" class="md:w-4/12 w-4/12 normal-case text-xl">
+        <Link to="/" class="md:w-4/12 w-4/12 normal-case text-xl">
           <img src={logo} alt="" />
         </Link>
         <div class="dropdown">
@@ -28,10 +28,12 @@ const Header = () => {
           </label>
           <ul
             tabindex="0"
-            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-semibold uppercase"
+            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box font-semibold uppercase"
           >
-            <li >
-              <Link className="active:bg-none focus:outline-none" to="/">Home</Link>
+            <li>
+              <Link className="focus:bg-none" to="/">
+                Home
+              </Link>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -41,12 +43,13 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        
       </div>
       <div class="justify-between hidden lg:flex ">
         <ul class="menu menu-horizontal p-0  font-semibold uppercase">
-          <li >
-            <Link className="bg-none focus:outline-none" to="/">Home</Link>
+          <li>
+            <Link className="bg-none focus:outline-none" to="/">
+              Home
+            </Link>
           </li>
           <li>
             <Link to="/about">About</Link>
