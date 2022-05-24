@@ -3,7 +3,7 @@ import Products from "../AllProducts/Products/Products";
 import Reviews from "../AllReviews/Reviews/Reviews";
 import Banner from "../Banner/Banner";
 import BusinessSummary from "../BusinessSummary/BusinessSummary";
-
+import CallToAction from "../CallToAction/CallToAction";
 
 const Home = () => {
   return (
@@ -11,7 +11,8 @@ const Home = () => {
       <Banner></Banner>
       <Products></Products>
       <BusinessSummary></BusinessSummary>
-       <Reviews></Reviews>
+      <Reviews></Reviews>
+      <CallToAction></CallToAction>
     </div>
   );
 };
