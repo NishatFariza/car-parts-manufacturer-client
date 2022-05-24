@@ -10,30 +10,29 @@ const Product = ({ product }) => {
       <div className="rounded-2xl flex justify-center items-center">
         <img className="rounded-2xl" src={img} alt="" />
       </div>
-      <div className="sm:py-8 py-4 px-4">
-        <h3 className="text-2xl font-semibold hover:text-yellow-400 duration-500 ">
+      <div className="lg:py-10 lg:px-6 py-10 px-6">
+        <h3 className="text-2xl font-semibold hover:text-yellow-600 duration-500 ">
           {name}
         </h3>
-        <p className="text-slate-800 mt-3">
+        <p className="text-stone-700 mt-3">
           <strong>availableQuantity: </strong>
           {availableQuantity}
         </p>
-        <p className="text-slate-800">
+        <p className="text-stone-700">
           <strong>minimumOrder: </strong>
-          {minimumOrder}
+          {minimumOrder} 
         </p>
-        <p className="text-slate-800 mb-2">
-          <strong>Price: </strong>
-          {price}
+        <p className="text-stone-700 mb-2">
+          <strong>Price: </strong> ${price}
         </p>
         <p title={description} className="text-stone-600">
-          {description.length >= 100
-            ? `${description.slice(0, 100)}...`
+          {description.length >= 150
+            ? `${description.slice(0, 150)}...`
             : description}
         </p>
         <button
           onClick={() => navigate(`/inventory/${product._id}`)}
-          className="border border-yellow-400 px-6 py-2 hover:bg-yellow-400 hover:text-black duration-500 mt-4 font-semibold text-stone-600"
+          className="border border-yellow-600 px-6 py-2 hover:bg-yellow-600 hover:text-black duration-500 mt-4 font-semibold text-stone-600"
         >
           Purchase Now
         </button>
