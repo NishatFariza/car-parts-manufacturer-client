@@ -20,7 +20,7 @@ const LogIn = () => {
           <div class="mb-6">
             <label
               for="email"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              class="block mb-2 text-sm font-semibold text-gray-900 dark:text-gray-300"
             >
               Your email
             </label>
@@ -47,7 +47,7 @@ const LogIn = () => {
           <div class="mb-6">
             <label
               for="password"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              class="block mb-2 text-sm font-semibold text-gray-900 dark:text-gray-300"
             >
               Your password
             </label>
@@ -77,20 +77,7 @@ const LogIn = () => {
                 type="checkbox"
                 value=""
                 class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-yellow-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-yellow-600 dark:ring-offset-gray-800"
-                {...register("name", {
-                  required: {
-                    value: true,
-                    message: "Name is Required",
-                  },
-                })}
               />
-              <label className="label">
-                {errors.name?.type === "required" && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.name.message}
-                  </span>
-                )}
-              </label>
             </div>
             <label
               for="remember"
@@ -103,28 +90,34 @@ const LogIn = () => {
             <div className="my-6">
               <p className="text-stone-700 text-sm">
                 Forget Password?
-                <button className="text-sm lg:ml-3 link-text">
+                <Link
+                  to="/"
+                  className="text-sm lg:ml-3 link-text text-yellow-700 font-semibold"
+                >
                   Click Reset!
-                </button>
+                </Link>
               </p>
               <p className="mt-1 text-stone-700 text-sm ">
                 Create a new Account?
-                <Link to="/register" className="text-sm lg:ml-3 link-text">
-                  Login!
+                <Link
+                  to="/register"
+                  className="text-sm lg:ml-3 link-text text-yellow-700 font-semibold"
+                >
+                  Register!
                 </Link>
               </p>
             </div>
-            <button className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-              <span>Forgot Password?</span>
-            </button>
           </div>
           <button
             type="submit"
-            class="text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800"
+            class="text-black bg-yellow-600 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-600 dark:focus:ring-yellow-600"
           >
             LogIn
           </button>
         </form>
+        <div className="lg:w-10/12 mx-auto">
+          <div class="divider font-semibold">OR</div>
+        </div>
         <SocialAuth></SocialAuth>
       </div>
     </div>
