@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SocialAuth from "../SocialAuth/SocialAuth";
 
 const Register = () => {
   return (
@@ -141,6 +142,7 @@ const Register = () => {
             </Link>
           </p>
         </div>
+        <SocialAuth></SocialAuth>
       </div>
     </div>
   );

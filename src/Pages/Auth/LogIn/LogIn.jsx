@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SocialAuth from "../SocialAuth/SocialAuth";
 
 const LogIn = () => {
   return (
@@ -81,6 +82,7 @@ const LogIn = () => {
             LogIn
           </button>
         </form>
+        <SocialAuth></SocialAuth>
       </div>
     </div>
   );
