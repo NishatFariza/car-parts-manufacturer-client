@@ -7,12 +7,11 @@ const Review = ({ reviewUser }) => {
   const { name, img, review, rating } = reviewUser;
 
   return (
-    <div className="w-11/12 sm:w-auto mx-auto border rounded-xl box-shadow duration-500 cursor-pointer">
-      
-      <div className="rounded-2xl flex justify-center items-center">
+    <div className="w-11/12 sm:w-auto mx-auto border rounded-xl box-shadow duration-500 cursor-pointer bg-white">
+      <div className="rounded-2xl flex justify-center items-center pt-10">
         <img className="rounded-full w-[80px] h-[80px]" src={img} alt="" />
       </div>
-      <div className="lg:py-10 lg:px-6 py-10 px-6 text-center">
+      <div className="lg:py-10 lg:px-6 py-10 px-6 text-center ">
         <h4>{name}</h4>
         <Rating
           initialRating={rating}
