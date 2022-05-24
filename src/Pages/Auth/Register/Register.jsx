@@ -155,9 +155,9 @@ const Register = () => {
           </button>
         </form>
         <div className="my-6">
-          <p className="mt-1 text-stone-700">
+          <p className="text-stone-700 text-sm">
             Already have an account?
-            <Link to="/logIn" className="text-sm lg:ml-3 link-text font-semibold">
+            <Link to="/logIn" className="text-sm lg:ml-3 font-semibold">
               Log in!
             </Link>
           </p>

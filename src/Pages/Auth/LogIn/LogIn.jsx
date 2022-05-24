@@ -92,7 +92,7 @@ const LogIn = () => {
                 Forget Password?
                 <Link
                   to="/"
-                  className="text-sm lg:ml-3 link-text text-yellow-700 font-semibold"
+                  className="text-sm lg:ml-3 text-yellow-700 font-semibold"
                 >
                   Click Reset!
                 </Link>
@@ -101,7 +101,7 @@ const LogIn = () => {
                 Create a new Account?
                 <Link
                   to="/register"
-                  className="text-sm lg:ml-3 link-text text-yellow-700 font-semibold"
+                  className="text-sm lg:ml-3 text-yellow-700 font-semibold"
                 >
                   Register!
                 </Link>
