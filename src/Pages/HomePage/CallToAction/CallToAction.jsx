@@ -27,7 +27,7 @@ const CallToAction = () => {
         />
         <img
           className="lg:w-6/12 w-10/12 lg:pt-0 pt-4 transform transition duration-500  bg-image"
-          src={CtaImage1}
+          src={CtaImage2}
           alt=""
         />
       </div>

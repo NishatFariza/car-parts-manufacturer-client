@@ -24,13 +24,25 @@ const Register = () => {
               name="floating_email"
               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
-              required=""
+              {...register("email", {
+                required: {
+                  value: true,
+                  message: "Name is Required",
+                },
+              })}
             />
+            <label className="label">
+              {errors.email?.type === "required" && (
+                <span className="label-text-alt text-red-500">
+                  {errors.email.message}
+                </span>
+              )}
+            </label>
             <label
               for="floating_email"
               class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Email address
+              Email Address
             </label>
           </div>
           <div class="relative z-0 w-full mb-6 group">
@@ -40,17 +52,17 @@ const Register = () => {
               id="floating_password"
               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
-              {...register("name", {
+              {...register("password", {
                 required: {
                   value: true,
-                  message: "Name is Required",
+                  message: "Password is Required",
                 },
               })}
             />
             <label className="label">
-              {errors.name?.type === "required" && (
+              {errors.password?.type === "required" && (
                 <span className="label-text-alt text-red-500">
-                  {errors.name.message}
+                  {errors.password.message}
                 </span>
               )}
             </label>
@@ -68,7 +80,7 @@ const Register = () => {
               id="floating_repeat_password"
               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
-              {...register("name", {
+              {...register("password", {
                 required: {
                   value: true,
                   message: "Name is Required",
@@ -76,9 +88,9 @@ const Register = () => {
               })}
             />
             <label className="label">
-              {errors.name?.type === "required" && (
+              {errors.password?.type === "required" && (
                 <span className="label-text-alt text-red-500">
-                  {errors.name.message}
+                  {errors.password.message}
                 </span>
               )}
             </label>
@@ -151,13 +163,13 @@ const Register = () => {
             type="submit"
             class="text-black bg-yellow-600 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-600 dark:focus:ring-yellow-600"
           >
-            Submit
+            Register
           </button>
         </form>
         <div className="my-6">
           <p className="text-stone-700 text-sm">
             Already have an account?
-            <Link to="/logIn" className="text-sm lg:ml-3 font-semibold">
+            <Link to="/logIn" className="text-sm lg:ml-3 text-yellow-700 font-semibold">
               Log in!
             </Link>
           </p>

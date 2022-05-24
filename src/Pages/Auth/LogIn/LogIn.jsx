@@ -28,18 +28,18 @@ const LogIn = () => {
               type="email"
               id="email"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="name@flowbite.com"
-              {...register("name", {
+              placeholder="Enter Your Email"
+              {...register("email", {
                 required: {
                   value: true,
-                  message: "Name is Required",
+                  message: "Email is Required",
                 },
               })}
             />
             <label className="label">
-              {errors.name?.type === "required" && (
+              {errors.email?.type === "required" && (
                 <span className="label-text-alt text-red-500">
-                  {errors.name.message}
+                  {errors.email.message}
                 </span>
               )}
             </label>
@@ -55,17 +55,17 @@ const LogIn = () => {
               type="password"
               id="password"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              {...register("name", {
+              {...register("password", {
                 required: {
                   value: true,
-                  message: "Name is Required",
+                  message: "Password is Required",
                 },
               })}
             />
             <label className="label">
-              {errors.name?.type === "required" && (
+              {errors.password?.type === "required" && (
                 <span className="label-text-alt text-red-500">
-                  {errors.name.message}
+                  {errors.password.message}
                 </span>
               )}
             </label>
