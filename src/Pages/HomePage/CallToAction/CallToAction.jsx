@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CtaImage1 from "../../../images/banner1.png";
+import CtaImage2 from "../../../images/banner2.png";
 
 const CallToAction = () => {
   return (
@@ -15,7 +17,11 @@ const CallToAction = () => {
           Shop Now
         </Link>
       </div>
-      <div className=""></div>
+      <div className="bg-[url('https://i.ibb.co/PMV7MK3/bg-car.webp')] bg-cover md:h-[60vh] h-[60vh]"></div>
+      <div className="flex my-16">
+        <img className="w-8/12" src={CtaImage1} alt="" />
+        <img className="w-8/12" src={CtaImage2} alt="" />
+      </div>
     </div>
   );
 };
