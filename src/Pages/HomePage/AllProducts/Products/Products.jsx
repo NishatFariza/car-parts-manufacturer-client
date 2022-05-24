@@ -14,7 +14,7 @@ const Products = () => {
     })();
   }, []);
   return (
-    <div>
+    <div className="lg:px-8">
       <div className="lg:w-6/12 md:w-8/12 sm:w-10/12 w-11/12 mx-auto text-center my-16">
         <h2 className="md:text-4xl text-2xl font-semibold mb-2 text-black">
           OUR PRODUCTS
