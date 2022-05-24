@@ -4,7 +4,7 @@ import "./NotFound.css";
 
 const NotFound = () => {
   return (
-    <div className="lg:h-[90vh] py-16 mx-auto notFound-bg flex justify-center items-center">
+    <div className="lg:h-[90vh] h-screen py-16 mx-auto notFound-bg flex justify-center items-center">
       <div className="lg:w-8/12 w-11/12 mx-auto ">
         <div className="text-center ">
           <p className="sm:text-9xl text-xl font-bold text-white">404</p>
