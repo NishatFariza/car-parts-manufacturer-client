@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Product from "../Product/Product";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -9,7 +10,7 @@ const Products = () => {
     (async () => {
       const { data } = await axios.get(url);
       setProducts(data);
-    //   console.log(data);
+      console.log(data);
     })();
   }, []);
   return (
@@ -23,6 +24,11 @@ const Products = () => {
           All best seller product are now available for you and your can buy
           this product from here any time any where so sop now
         </p>
+      </div>
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-7">
+        {products.map((product) => (
+          <Product product={product} key={product._id}></Product>
+        ))}
       </div>
     </div>
   );
