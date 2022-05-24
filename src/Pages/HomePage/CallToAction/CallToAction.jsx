@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./CallToAction.css";
 import CtaImage1 from "../../../images/banner1.png";
 import CtaImage2 from "../../../images/banner2.png";
 
@@ -18,9 +19,18 @@ const CallToAction = () => {
         </Link>
       </div>
       <div className="bg-[url('https://i.ibb.co/PMV7MK3/bg-car.webp')] bg-cover md:h-[60vh] h-[60vh]"></div>
-      <div className="flex my-16">
-        <img className="w-8/12" src={CtaImage1} alt="" />
-        <img className="w-8/12" src={CtaImage2} alt="" />
+      <div className="flex lg:flex-row flex-col my-16 lg:w-10/12 justify-between items-center mx-auto">
+        <img
+          className="lg:w-6/12 w-10/12 transform transition duration-500  lg:mr-12 mr-0 bg-image"
+          src={CtaImage1}
+          alt=""
+        />
+        <img
+          className="lg:w-6/12 w-10/12 lg:pt-0 pt-4 transform transition duration-500  bg-image"
+          src={CtaImage1}
+          alt=""
+        />
+        
       </div>
     </div>
   );
