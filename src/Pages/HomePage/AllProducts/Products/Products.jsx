@@ -19,7 +19,7 @@ const Products = () => {
         <h2 className="md:text-4xl text-2xl font-semibold mb-2 text-black">
           OUR PRODUCTS
         </h2>
-        <div className="h-1 w-24 rounded-lg bg-yellow-400 mx-auto"></div>
+        <div className="h-1 w-24 rounded-lg bg-yellow-600 mx-auto"></div>
         <p className="mt-3">
           All best seller product are now available for you and your can buy
           this product from here any time any where so sop now
