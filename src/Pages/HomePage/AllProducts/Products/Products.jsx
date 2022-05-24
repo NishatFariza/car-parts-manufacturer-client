@@ -15,8 +15,8 @@ const Products = () => {
   }, []);
   return (
     <div>
-      <div className="lg:w-6/12 md:w-8/12 sm:w-10/12 w-11/12 mx-auto text-center my-8">
-        <h2 className="md:text-4xl text-2xl font-semibold mb-2">
+      <div className="lg:w-6/12 md:w-8/12 sm:w-10/12 w-11/12 mx-auto text-center my-16">
+        <h2 className="md:text-4xl text-2xl font-semibold mb-2 text-black">
           OUR PRODUCTS
         </h2>
         <div className="h-1 w-24 rounded-lg bg-yellow-400 mx-auto"></div>
@@ -25,7 +25,7 @@ const Products = () => {
           this product from here any time any where so sop now
         </p>
       </div>
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-7">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-7 pt-8 pb-16">
         {products.map((product) => (
           <Product product={product} key={product._id}></Product>
         ))}

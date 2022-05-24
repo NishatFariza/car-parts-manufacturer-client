@@ -6,8 +6,8 @@ const Product = ({ product }) => {
   const { name, img, price, description, minimumOrder, availableQuantity } =
     product;
   return (
-    <div className="w-11/12 sm:w-auto mx-auto border rounded-2xl box-shadow duration-500 cursor-pointer">
-      <div className="rounded-2xl">
+    <div className="w-11/12 sm:w-auto mx-auto border rounded-xl box-shadow duration-500 cursor-pointer">
+      <div className="rounded-2xl flex justify-center items-center">
         <img className="rounded-2xl" src={img} alt="" />
       </div>
       <div className="sm:py-8 py-4 px-4">
