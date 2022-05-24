@@ -15,8 +15,9 @@ const Reviews = () => {
     return <p>Loading....</p>;
   }
   return (
-    <div className="lg:px-8">
+    
       <div className="bg-[url('https://i.ibb.co/5WmVLKK/review-bg.webp')] bg-cover">
+        <div className="lg:px-8">
         <div className="lg:w-6/12 md:w-8/12 sm:w-10/12 w-11/12 mx-auto text-center py-16">
           <h2 className="md:text-4xl text-2xl font-semibold mb-2 text-black">
             OUR PRODUCTS
