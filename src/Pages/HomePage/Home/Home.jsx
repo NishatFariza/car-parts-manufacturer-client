@@ -4,6 +4,7 @@ import Reviews from "../AllReviews/Reviews/Reviews";
 import Banner from "../Banner/Banner";
 import BusinessSummary from "../BusinessSummary/BusinessSummary";
 import CallToAction from "../CallToAction/CallToAction";
+import NewsLatter from "../NewsLetter/NewsLatter";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <BusinessSummary></BusinessSummary>
       <Reviews></Reviews>
       <CallToAction></CallToAction>
+      <NewsLatter></NewsLatter>
     </div>
   );
 };
