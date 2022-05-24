@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Json Linkon",
+        "img": "https://www.davidsdika.com/wp-content/uploads/2021/05/linkedin-beau-portrait.jpg",
+        "review": "Super efficient and cold, compatible with most of the AM4 motherboards (think, B450).It is the latest Zen3 chip that works well yet sipping power from the outlet.Performance is great in most common workloads",
+        "rating": 4
+    },
+    {
+        "name": "Tasnima Akter",
+        "img": "https://i0.wp.com/freehindiwishes.com/wp-content/uploads/2020/10/Good-Girl-Pic-2.jpg?resize=400%2C400",
+        "review": "This board provides good value and it does come (as another reviewer noted) with BIOS 1201. 1201 will let you boot up a Ryzen 3 or 5 3200G/3400G (know that these chips are actually based on last year's 11nm & thus not true 3000 cpu releases). But what non-users of ASUS motherboards might not be aware of or not know is that the BIOS EZ Flash 3 Utility provided by ASUS (inside the BIOS0 does not require an OS to update the BIOS. You ca actually update the motherboard without any hard drive/SSD/etc installed).",
+        "rating": 5
+    },
+    {
+        "name": "Jessika",
+        "img": "https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1613681044000/photosp/7b2c54cd-f5e7-4966-81c3-746bf2d919cf/stock-photo-three-jungle-beautiful-girl-a-young-indian-girl-7b2c54cd-f5e7-4966-81c3-746bf2d919cf.jpg",
+        "review": "I wanted a basic, stable motherboard for a Ryzen 2700X CPU, that I could plug in and have work--this one was moderately priced, and has the B450 chipset. I didn't need the X470 chipset features so I chose this; it booted up and runs well with all 8 cores loaded 100% during renders. Plenty of connectivity (SATA, PCI-E slots) for the price. Just what I wanted.",
+        "rating": 3
+    },
+    {
+        "name": "Jannatul Ferdose",
+        "img": "https://i0.wp.com/freehindiwishes.com/wp-content/uploads/2020/10/Good-Girl-Pic-15.jpg?resize=400%2C400",
+        "review": "Nice piece of gear for my Micro build !! Nice fit into my Masterbox Q300L (no cd/dvd). Came with updated BIOS out of the box (yes, i checked the site). Put my Ryzen 2600 into mobo, worked first time at stock speed (3.4) with my G.Skill Ram and Seasonic PSU.",
+        "rating": 5
+    },
+    {
+        "name": "Herry Potter",
+        "img": "https://sp-ao.shortpixel.ai/client/q_glossy,ret_img,w_464,h_464/https://www.corporatephotographerslondon.com/wp-content/uploads/2021/06/non-smiling-LinkedIn-profile-photo.jpg",
+        "review": "ASUS is a top brand known for solid build quality since I got into computers over 25 years ago. I bought this for a build for my dad (a school teacher), and I will buy it again, gladly, without hesitation for my next build(s). Since reliability is my first priority, I did not overclock the CPU. ",
+        "rating": 2
+    },
+    
+    {
+        "name": "K. Smith",
+        "img": "https://pbs.twimg.com/profile_images/713747023573434369/LuwqULXE_400x400.jpg",
+        "review": "Usé esta tarjeta madre para un Ryzen 3 3200G que detectó nativamente (sin necesidad de actualizar el BIOS) y RAM Corsair LPX 16GB https://www.amazon.com.mx/gp/product/B07B4G525F/ y todo muy bien. La configuración de procesador y RAM en el primer inicio es la ideal, y con un ligero OC al procesador (ASUS Optimal) y RAM establecida a 3000 MHz D.O.C.P. XMP queda muy bien.",
+        "rating": 3
+    }
+]
