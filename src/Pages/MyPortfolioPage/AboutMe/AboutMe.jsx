@@ -1,12 +1,15 @@
 import React from "react";
+import about from "../../../images/about.jpg";
 
 const AboutMe = () => {
   return (
-    <div className="h-[60vh] flex justify-center items-center lg:px-10 px-5">
-      <div></div>
-      <div className="">
-        <h3>Who AM|</h3>
-        <p>
+    <div className="h-[60vh] flex justify-between items-center lg:px-10 px-5 w-10/12 mx-auto">
+      <div className="w-5/12 flex justify-end mr-8">
+        <img className="w-8/12" src={about} alt="" />
+      </div>
+      <div className="w-7/12">
+        <h3 className="text-4xl font-bold">Who AM I</h3>
+        <p className="mt-4 font-semibold">
           A Curious, Passionate Jr. MERN Stack Developer. Love to take Dare and
           handle it professionally. Handle difficulties and errors efficient
           way. Try to keep myself with new technologies and learn that.
