@@ -6,7 +6,7 @@ import LogIn from './Pages/Auth/LogIn/LogIn';
 import Register from './Pages/Auth/Register/Register';
 import RequireAuth from './Pages/Auth/RequireAuth/RequireAuth';
 import Blogs from './Pages/Blogs/Blogs';
-import AddProducts from './Pages/DashboardPage/Dashboard/AddProducts/AddProducts';
+import AddProducts from './Pages/DashboardPage/AddProducts/AddProducts';
 import Dashboard from './Pages/DashboardPage/Dashboard/Dashboard';
 import Home from './Pages/HomePage/Home/Home';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
