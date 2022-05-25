@@ -36,6 +36,9 @@ const Header = () => {
               </Link>
             </li>
             <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+            <li>
               <Link to="/blogs">Blogs</Link>
             </li>
             <li>
@@ -53,6 +56,9 @@ const Header = () => {
             <Link className="bg-none focus:outline-none" to="/">
               Home
             </Link>
+          </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
           </li>
           <li>
             <Link to="/blogs">Blogs</Link>
