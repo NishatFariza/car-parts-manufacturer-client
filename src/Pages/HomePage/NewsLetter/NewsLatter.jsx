@@ -21,7 +21,7 @@ const NewsLatter = () => {
               <input
                 type="text"
                 placeholder="Enter Your Email"
-                class="input input-bordered w-full max-w-xs rounded-full"
+                className="input input-bordered w-full max-w-xs rounded-full"
               />
               <input
                 className="btn lg:w-2/12 w-full max-w-xs rounded-full -ml-28"

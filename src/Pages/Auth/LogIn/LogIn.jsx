@@ -89,17 +89,17 @@ const LogIn = () => {
       </div>
       <div className="lg:w-6/12 w-11/12 mx-auto lg:my-28 my-12 border-2 px-6 py-8 rounded">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div class="mb-6">
+          <div className="mb-6">
             <label
-              for="email"
-              class="block mb-2 text-sm font-semibold text-gray-900 dark:text-gray-300"
+              htmlFor="email"
+              className="block mb-2 text-sm font-semibold text-gray-900 dark:text-gray-300"
             >
               Your email
             </label>
             <input
               type="email"
               id="email"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Enter Your Email"
               {...register("email", {
                 required: {
@@ -117,17 +117,17 @@ const LogIn = () => {
               )}
             </label>
           </div>
-          <div class="mb-6">
+          <div className="mb-6">
             <label
-              for="password"
-              class="block mb-2 text-sm font-semibold text-gray-900 dark:text-gray-300"
+              htmlFor="password"
+              className="block mb-2 text-sm font-semibold text-gray-900 dark:text-gray-300"
             >
               Your password
             </label>
             <input
               type="password"
               id="password"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               {...register("password", {
                 required: {
                   value: true,
@@ -145,7 +145,7 @@ const LogIn = () => {
           </div>
           <button
             type="submit"
-            class="text-black bg-yellow-600 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-600 dark:focus:ring-yellow-600"
+            className="text-black bg-yellow-600 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-600 dark:focus:ring-yellow-600"
           >
             LogIn
           </button>
@@ -173,7 +173,7 @@ const LogIn = () => {
           </div>
         </div>
         <div className="lg:w-10/12 mx-auto">
-          <div class="divider font-semibold">OR</div>
+          <div className="divider font-semibold">OR</div>
         </div>
         <SocialAuth></SocialAuth>
       </div>

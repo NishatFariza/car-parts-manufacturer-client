@@ -13,7 +13,7 @@ const CallToAction = () => {
         </h2>
         <Link
           to="/"
-          class="btn bg-yellow-600 border-0 hover:bg-stone-200 rounded-full px-8 uppercase duration-300 text-black"
+          className="btn bg-yellow-600 border-0 hover:bg-stone-200 rounded-full px-8 uppercase duration-300 text-black"
         >
           Shop Now
         </Link>
