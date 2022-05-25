@@ -39,6 +39,9 @@ const Header = () => {
               <Link to="/blogs">Blogs</Link>
             </li>
             <li>
+              <Link to="/myportfolio">My Portfolio</Link>
+            </li>
+            <li>
               <Link to="/login">Log In</Link>
             </li>
           </ul>
@@ -53,6 +56,9 @@ const Header = () => {
           </li>
           <li>
             <Link to="/blogs">Blogs</Link>
+          </li>
+          <li>
+            <Link to="/myportfolio">My Portfolio</Link>
           </li>
           <li>
             <Link to="/login">Log In</Link>
