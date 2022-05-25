@@ -6,6 +6,7 @@ import LogIn from './Pages/Auth/LogIn/LogIn';
 import Register from './Pages/Auth/Register/Register';
 import RequireAuth from './Pages/Auth/RequireAuth/RequireAuth';
 import Blogs from './Pages/Blogs/Blogs';
+import AddProducts from './Pages/DashboardPage/Dashboard/AddProducts/AddProducts';
 import Dashboard from './Pages/DashboardPage/Dashboard/Dashboard';
 import Home from './Pages/HomePage/Home/Home';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
@@ -24,7 +25,9 @@ function App() {
          <RequireAuth>
            <Dashboard></Dashboard>
          </RequireAuth>
-       }></Route>
+       }>
+         <Route path='addproducts' element={<AddProducts></AddProducts>}></Route>
+       </Route>
        <Route path='/login' element={<LogIn></LogIn>}></Route>
        <Route path='/register' element={<Register></Register>}></Route>
        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
