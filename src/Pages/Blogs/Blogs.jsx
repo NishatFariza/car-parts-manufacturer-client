@@ -33,7 +33,7 @@ const Blogs = () => {
           </AccordionItem>
           <AccordionItem className="box-shadow border-y rounded duration-500">
             <AccordionItemHeading className="border-y-b  py-6 sm:px-3 px-0 rounded hover:text-yellow-500 text-black cursor-pointer">
-              <AccordionItemButton className="text-xl font-bold duration-300 flex items-start">
+              <AccordionItemButton className="lg:text-xl text-sm font-bold duration-300 flex items-start">
                 What are the different ways to manage a state in a React
                 application?
               </AccordionItemButton>
@@ -53,7 +53,7 @@ const Blogs = () => {
           </AccordionItem>
           <AccordionItem className="box-shadow border-b rounded duration-500">
             <AccordionItemHeading className="  py-6 sm:px-3 px-0 rounded hover:text-yellow-500 text-black cursor-pointer">
-              <AccordionItemButton className="text-xl font-bold duration-300 flex items-start">
+              <AccordionItemButton className="lg:text-xl text-sm font-bold duration-300 flex items-start">
                 How does prototypical inheritance work?
               </AccordionItemButton>
             </AccordionItemHeading>
@@ -69,7 +69,7 @@ const Blogs = () => {
           </AccordionItem>
           <AccordionItem className="box-shadow border-b rounded duration-500">
             <AccordionItemHeading className=" py-6 sm:px-3 px-0 rounded hover:text-yellow-500 text-black cursor-pointer">
-              <AccordionItemButton className="text-xl font-bold duration-300 flex items-start">
+              <AccordionItemButton className="lg:text-xl text-sm font-bold duration-300 flex items-start">
                 Why you do not set the state directly in React. For example, if
                 you have const [products, setProducts] = useState([]). Why you
                 do not set products = [...] instead, you use the setProducts?
@@ -87,7 +87,7 @@ const Blogs = () => {
           </AccordionItem>
           <AccordionItem className="box-shadow border-b rounded duration-500">
             <AccordionItemHeading className=" py-6 sm:px-3 px-0 rounded hover:text-yellow-500 text-black cursor-pointer">
-              <AccordionItemButton className="text-xl font-bold duration-300 flex items-start">
+              <AccordionItemButton className="lg:text-xl text-sm font-bold duration-300 flex items-start">
                 You have an array of products. Each product has a name, price,
                 description, etc. How will you implement a search to find
                 products by name?
@@ -105,7 +105,7 @@ const Blogs = () => {
           </AccordionItem>
           <AccordionItem className="box-shadow border-b rounded duration-500">
             <AccordionItemHeading className=" py-6 sm:px-3 px-0 rounded hover:text-yellow-500 text-black cursor-pointer">
-              <AccordionItemButton className="text-xl font-bold duration-300 flex items-start">
+              <AccordionItemButton className="lg:text-xl text-sm font-bold duration-300 flex items-start">
                 What is a unit test? Why should write unit tests?
               </AccordionItemButton>
             </AccordionItemHeading>
