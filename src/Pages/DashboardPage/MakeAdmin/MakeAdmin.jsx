@@ -14,12 +14,12 @@ const MakeAdmin = () => {
   } = useQuery("users", () => axiosPrivate.get(`http://localhost:5000/users`));
   // console.log(users?.data);
 
-  if ( isLoading) {
-      return <Loading></Loading>
+  if (isLoading) {
+    return <Loading></Loading>;
   }
   return (
     <div className="sm:px-10 px-2 pb-5">
-      <h5 className="text-lg text-left font-bold  mb-2 text-primary">
+      <h5 className="lg:text-3xl text-xl mb-4 text-center font-bold  text-yellow-500">
         Make Admin
       </h5>
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -31,7 +31,7 @@ const MakeAdmin = () => {
                 user
               </th>
               <th scope="col" class="py-2 sm:py-3 text-center">
-                Autorize
+                Author
               </th>
               <th scope="col" class="py-2 sm:py-3 text-center">
                 Action

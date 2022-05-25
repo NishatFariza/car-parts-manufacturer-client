@@ -11,7 +11,7 @@ const ManageProducts = () => {
     error,
     data: products,
     refetch,
-  } = useQuery("parts", () => axiosPrivate.get("http://localhost:5000/products"));
+  } = useQuery("products", () => axiosPrivate.get("http://localhost:5000/products"));
 
   const handleDelete = (id, name) => {
     // console.log(id);
