@@ -2,8 +2,8 @@ import React from "react";
 
 const NewsLatter = () => {
   return (
-    <div className="my-28">
-      <div className="bg-[url('https://i.ibb.co/Cwdn87T/newsletter-bg.webp')] bg-cover md:h-[70vh] h-[60vh] lg:w-11/12 mx-auto">
+    <div className="lg:mt-32 mt-10 mb-20">
+      <div className="bg-[url('https://i.ibb.co/Cwdn87T/newsletter-bg.webp')] bg-cover md:h-[70vh] h-[80vh] lg:w-11/12 mx-auto">
         <div className="lg:w-8/12 w-10/12 mx-auto flex justify-center items-center">
           <div className="text-center">
             <h4 className="primary-color lg:text-3xl md:text-2xl text-xl ">

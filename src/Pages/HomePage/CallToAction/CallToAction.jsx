@@ -19,7 +19,7 @@ const CallToAction = () => {
         </Link>
       </div>
       <div className="bg-[url('https://i.ibb.co/PMV7MK3/bg-car.webp')] bg-cover md:h-[70vh] h-[60vh]"></div>
-      <div className="flex lg:flex-row flex-col my-16 lg:w-10/12 justify-between items-center mx-auto">
+      <div className="flex lg:flex-row flex-col mt-6 mb-20 lg:w-10/12 justify-between items-center mx-auto">
         <img
           className="lg:w-6/12 w-10/12 transform transition duration-500  lg:mr-12 mr-0 bg-image"
           src={CtaImage1}
