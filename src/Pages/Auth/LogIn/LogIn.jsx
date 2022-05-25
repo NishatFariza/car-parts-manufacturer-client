@@ -1,13 +1,18 @@
-import React from "react";
+import { sendPasswordResetEmail } from "firebase/auth";
+import React, { useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
 import SocialAuth from "../SocialAuth/SocialAuth";
 
 const LogIn = () => {
+  const [email, setEmail] = useState("");
+  // console.log(email);
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  console.log(user);
   const {
     register,
     formState: { errors },
@@ -15,9 +20,38 @@ const LogIn = () => {
     reset,
   } = useForm();
 
+
+  if(user){
+    
+  }
+
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
+  };
+
+  //reset password
+  const handleResetPassword = (e) => {
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        toast.success("Mail Sent!", { id: "signup" });
+      })
+      .catch((error) => {
+        console.log(error.code);
+        const errorCode = error.code;
+
+        if (errorCode === "auth/invalid-email") {
+          toast.error("This Email is not Valid!", { id: "signup" });
+        }
+        if (errorCode === "auth/missing-email") {
+          toast.error("Please Enter Email", { id: "signup" });
+        }
+        if (errorCode === "auth/user-not-found") {
+          toast.error("User not With This Email. Please SignUp", {
+            id: "signup",
+          });
+        }
+      });
   };
 
   return (
@@ -45,6 +79,7 @@ const LogIn = () => {
                   message: "Email is Required",
                 },
               })}
+              onBlur={(e) => setEmail(e.target.value)}
             />
             <label className="label">
               {errors.email?.type === "required" && (
@@ -96,28 +131,7 @@ const LogIn = () => {
               Remember me
             </label>
           </div>
-          <div>
-            <div className="my-6">
-              <p className="text-stone-700 text-sm">
-                Forget Password?
-                <Link
-                  to="/"
-                  className="text-sm lg:ml-3 text-yellow-700 font-semibold"
-                >
-                  Click Reset!
-                </Link>
-              </p>
-              <p className="mt-1 text-stone-700 text-sm ">
-                Create a new Account?
-                <Link
-                  to="/register"
-                  className="text-sm lg:ml-3 text-yellow-700 font-semibold"
-                >
-                  Register!
-                </Link>
-              </p>
-            </div>
-          </div>
+
           <button
             type="submit"
             class="text-black bg-yellow-600 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-600 dark:focus:ring-yellow-600"
@@ -125,6 +139,28 @@ const LogIn = () => {
             LogIn
           </button>
         </form>
+        <div>
+          <div className="my-6">
+            <p className="text-stone-700 text-sm">
+              Forget Password?
+              <button
+                onClick={handleResetPassword}
+                className="text-sm lg:ml-3 text-yellow-700 font-semibold"
+              >
+                Click Reset!
+              </button>
+            </p>
+            <p className="mt-1 text-stone-700 text-sm ">
+              Create a new Account?
+              <Link
+                to="/register"
+                className="text-sm lg:ml-3 text-yellow-700 font-semibold"
+              >
+                Register!
+              </Link>
+            </p>
+          </div>
+        </div>
         <div className="lg:w-10/12 mx-auto">
           <div class="divider font-semibold">OR</div>
         </div>
