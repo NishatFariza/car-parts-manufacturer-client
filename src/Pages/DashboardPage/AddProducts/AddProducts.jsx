@@ -32,7 +32,7 @@ const AddProducts = () => {
             availableQuantity: data.availableQuantity,
             img: imgUrl,
           };
-        //   console.log(product);
+          //   console.log(product);
           axiosPrivate
             .post(`http://localhost:5000/product`, product)
             .then((data) => {
@@ -50,7 +50,7 @@ const AddProducts = () => {
 
   return (
     <div className="">
-      <h2 className="text-3xl font-bold mb-5  inline-block pb-1 px-5  text-center">
+      <h2 className="lg:text-3xl text-xl mb-4 text-center font-bold  text-yellow-500">
         Add A Products
       </h2>
       <form
@@ -90,7 +90,7 @@ const AddProducts = () => {
             />
             <label className="label">
               {errors.price?.type === "required" && (
-                <span className="label-text-alt text-red-500">
+                <span className="label-text-alt text-red-700">
                   {errors.price.message}
                 </span>
               )}
@@ -176,10 +176,9 @@ const AddProducts = () => {
         </label>
 
         <input
-          style={{ fontFamily: "Open Sans, sans-serif", letterSpacing: "2px" }}
-          class="hover:bg-white transition w-40 mx-auto text-center bg-primary  hover:text-primary rounded-full text-white border-2 border-primary py-2"
+          class="border border-yellow-600 px-6 py-2 hover:bg-yellow-600 hover:text-black duration-500 mt-4 font-semibold text-stone-600  transition w-40 mx-auto text-center rounded-full cursor-pointer"
           type={"submit"}
-          value={"Add Parts"}
+          value={"Add Products"}
         />
       </form>
     </div>

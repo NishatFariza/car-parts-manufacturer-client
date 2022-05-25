@@ -48,7 +48,7 @@ const ManageAllOrders = () => {
 
   return (
     <div className="sm:px-10 px-2 pb-5">
-      <h5 className="text-3xl mb-4 text-center font-bold  text-yellow-500">
+      <h5 className="lg:text-3xl text-xl mb-4 text-center font-bold  text-yellow-500">
         Manage All Orders
       </h5>
       <div class="relative  overflow-x-auto shadow-md sm:rounded-lg">
