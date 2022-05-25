@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SocialAuth from "../SocialAuth/SocialAuth";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import toast from "react-hot-toast";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
   const {
@@ -14,6 +16,30 @@ const Register = () => {
     handleSubmit,
     reset,
   } = useForm();
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+ 
+  if (user) {
+    navigate("/");
+  }
+  useEffect(() => {
+    if (error || updateError) {
+        console.log(error.code);
+        console.log(updateError.code);
+        switch (error.code) {
+            case "auth/email-already-in-use":
+                toast.error('Email Already Exist!', { id: "register" })
+                break;
+            case "invalid-email":
+                toast.error('invalid-email!', { id: "register" })
+                break;
+
+            default:
+                toast.error('Something is wrong', { id: "register" })
+                break;
+        }
+    }
+}, [error, updateError])
+
 
   const onSubmit = (data) => {
     console.log(data);

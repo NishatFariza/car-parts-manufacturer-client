@@ -1,13 +1,15 @@
 import { sendPasswordResetEmail } from "firebase/auth";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import Loading from "../../Shared/Loading/Loading";
 import SocialAuth from "../SocialAuth/SocialAuth";
 
 const LogIn = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   // console.log(email);
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -20,9 +22,35 @@ const LogIn = () => {
     reset,
   } = useForm();
 
+  if (user) {
+    navigate("/");
+  }
 
-  if(user){
-    
+  useEffect(() => {
+    if (error) {
+      console.log(error.code);
+      switch (error.code) {
+        case "auth/wrong-password":
+          toast.error("Password is Wrong!", { id: "register" });
+          break;
+        case "auth/too-many-requests":
+          toast.error("Too Many Requests!", { id: "register" });
+          break;
+        case "auth/user-not-found":
+          toast.error("User Not Available, Please Sign Up!", {
+            id: "register",
+          });
+          break;
+
+        default:
+          toast.error("Something is wrong", { id: "login" });
+          break;
+      }
+    }
+  }, [error]);
+
+  if (loading ) {
+    return <Loading></Loading>;
   }
 
   const onSubmit = (data) => {
@@ -115,23 +143,6 @@ const LogIn = () => {
               )}
             </label>
           </div>
-          <div class="flex items-start mb-6">
-            <div class="flex items-center h-5">
-              <input
-                id="remember"
-                type="checkbox"
-                value=""
-                class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-yellow-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-yellow-600 dark:ring-offset-gray-800"
-              />
-            </div>
-            <label
-              for="remember"
-              class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >
-              Remember me
-            </label>
-          </div>
-
           <button
             type="submit"
             class="text-black bg-yellow-600 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-600 dark:focus:ring-yellow-600"
