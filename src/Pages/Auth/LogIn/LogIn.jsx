@@ -1,22 +1,32 @@
 import React from "react";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import auth from "../../../firebase.init";
 import SocialAuth from "../SocialAuth/SocialAuth";
 
 const LogIn = () => {
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
   const {
     register,
     formState: { errors },
     handleSubmit,
     reset,
   } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    signInWithEmailAndPassword(data.email, data.password);
+  };
+
   return (
     <div>
       <div className="bg-[url('https://i.ibb.co/Qj8JDbk/page-header-bg.webp')] bg-cover md:h-[40vh] h-[40vh] flex flex-col justify-center items-center">
         <h3 className="text-white text-4xl">Login</h3>
       </div>
       <div className="lg:w-6/12 w-11/12 mx-auto lg:my-28 my-12 border-2 px-6 py-8 rounded">
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div class="mb-6">
             <label
               for="email"

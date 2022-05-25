@@ -1,7 +1,10 @@
 import React from "react";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { FcGoogle } from "react-icons/fc";
+import auth from "../../../firebase.init";
 
 const SocialAuth = () => {
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   return (
     <div>
       <button className="bg-yellow-600 hover:bg-stone-200 duration-300 md:w-8/12 w-full mx-auto md:py-3 py-2 px-5 md:px-6 flex justify-center items-center rounded-full google-btn md:text-lg text-sm mt-6 mb-4 font-medium ">
