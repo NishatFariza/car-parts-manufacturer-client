@@ -26,7 +26,7 @@ const Dashboard = () => {
             {/* {admin ? ( */}
             <>
               <li>
-                <Link className="border my-1" to={"/dashboard/manageAllOrders"}>
+                <Link className="border my-1" to={"/dashboard/manageallorders"}>
                   Manage All Orders
                 </Link>
               </li>
