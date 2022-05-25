@@ -4,7 +4,7 @@ import "./AboutMe.css";
 
 const AboutMe = () => {
   return (
-    <div className="lg:h-[60vh] h-screen flex lg:flex-row flex-col justify-between items-center lg:px-10 px-2 lg:w-10/12 w-11/12 mx-auto">
+    <div className="lg:h-[70vh] h-screen flex lg:flex-row flex-col justify-between items-center lg:px-10 px-2 lg:w-10/12 w-11/12 mx-auto">
       <div className="lg:w-5/12 w-10/12 flex  lg:justify-end justify-center mr-8 ">
         <img
           className="lg:w-9/12 w-full transform transition duration-500 cursor-pointer lg:mr-12 mr-0 about-image"
