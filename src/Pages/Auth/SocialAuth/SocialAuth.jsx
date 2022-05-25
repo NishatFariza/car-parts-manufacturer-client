@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
@@ -10,14 +11,30 @@ const SocialAuth = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
   if (user) {
-    navigate(user);
+    navigate("/");
   }
 
-  if (loading ) {
+  useEffect(() => {
+    if (error) {
+      console.log(error.code);
+      switch (error.code) {
+        case "auth/popup-closed-by-user":
+          toast.error("Login canceled by User!", { id: "social_login" });
+          break;
+        case "invalid-email":
+          toast.error("invalid-email!", { id: "social_login" });
+          break;
+
+        default:
+          toast.error("Something is wrong", { id: "social_login" });
+          break;
+      }
+    }
+  }, [error]);
+
+  if (loading) {
     return <Loading></Loading>;
   }
-
-  
 
   return (
     <div>

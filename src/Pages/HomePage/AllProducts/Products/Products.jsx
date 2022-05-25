@@ -10,7 +10,7 @@ const Products = () => {
     (async () => {
       const { data } = await axios.get(url);
       setProducts(data);
-      console.log(data);
+      // console.log(data);
     })();
   }, []);
   return (

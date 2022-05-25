@@ -14,7 +14,7 @@ const LogIn = () => {
   // console.log(email);
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-  console.log(user);
+  // console.log(user);
   const {
     register,
     formState: { errors },
@@ -49,7 +49,7 @@ const LogIn = () => {
     }
   }, [error]);
 
-  if (loading ) {
+  if (loading) {
     return <Loading></Loading>;
   }
 
