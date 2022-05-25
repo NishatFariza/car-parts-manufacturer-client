@@ -50,7 +50,7 @@ const AddProducts = () => {
 
   return (
     <div className="">
-      <h2 className="text-3xl font-bold mb-5 border-b-4 inline-block pb-1 px-5 border-primary text-center">
+      <h2 className="text-3xl font-bold mb-5  inline-block pb-1 px-5  text-center">
         Add A Products
       </h2>
       <form
