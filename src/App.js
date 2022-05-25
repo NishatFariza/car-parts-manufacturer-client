@@ -15,7 +15,8 @@ import ManageProducts from './Pages/DashboardPage/ManageProducts/ManageProducts'
 import MyOrder from './Pages/DashboardPage/MyOrder/MyOrder';
 import MyProfile from './Pages/DashboardPage/MyProfile/MyProfile';
 import Home from './Pages/HomePage/Home/Home';
-import MyPortfolio from './Pages/MyPortfolio/PortfolioBanner/MyPortfolio';
+import MyPortfolio from './Pages/MyPortfolioPage/MyPortfolio/MyPortfolio';
+
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
