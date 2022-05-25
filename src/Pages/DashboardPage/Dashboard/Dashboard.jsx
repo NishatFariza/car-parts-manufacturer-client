@@ -3,13 +3,13 @@ import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   return (
-    <div className="mt-[66px]">
+    <div className="">
+      <div className="bg-[url('https://i.ibb.co/Qj8JDbk/page-header-bg.webp')] bg-cover md:h-[40vh] h-[40vh] flex flex-col justify-center items-center ">
+        <h3 className="text-white lg:text-5xl text-3xl">Dashboard</h3>
+      </div>
       <div class="drawer drawer-mobile mt-[64px] Container">
         <input id="dashboard-drower" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content">
-          <h3 className="text-2xl text-center sm:text-left sm:px-10 pb-3 pt-5 text-purple-500 font-bold">
-            Dashboard
-          </h3>
+        <div class="drawer-content ">
           {/* <!-- Page content here --> */}
           <Outlet />
         </div>

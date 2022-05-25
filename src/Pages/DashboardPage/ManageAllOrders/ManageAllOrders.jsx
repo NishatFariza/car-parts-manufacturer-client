@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
   );
   console.log(orders);
 
-  const hnadleDelete = (id, name) => {
+  const handleDelete = (id, name) => {
     console.log(id);
 
     Swal.fire({
@@ -48,8 +48,8 @@ const ManageAllOrders = () => {
 
   return (
     <div className="sm:px-10 px-2 pb-5">
-      <h5 className="text-lg text-left font-bold  mb-2 text-primary">
-        Mange All Orders
+      <h5 className="text-3xl mb-4 text-center font-bold  text-yellow-500">
+        Manage All Orders
       </h5>
       <div class="relative  overflow-x-auto shadow-md sm:rounded-lg">
         <table class="w-full text-sm text-center text-gray-500 dark:text-gray-400">
@@ -66,7 +66,7 @@ const ManageAllOrders = () => {
                 Total Price
               </th>
               <th scope="col" class="py-2 text-center sm:py-3">
-                Quanity
+                Quantity
               </th>
               <th scope="col" class="py-2 text-center sm:py-3">
                 Payment
@@ -93,7 +93,7 @@ const ManageAllOrders = () => {
                   </td>
                   <td class="py-2 text-[13px] text-center sm:py-4">
                     <button
-                      onClick={() => hnadleDelete(order._id, order.name)}
+                      onClick={() => handleDelete(order._id, order.name)}
                       className="btn mr-1 btn-xs bg-primary text-white border-none"
                     >
                       Ship
@@ -103,7 +103,7 @@ const ManageAllOrders = () => {
                   <td class="py-2 text-[13px] text-center sm:py-4">
                     {!order.pay && (
                       <button
-                        onClick={() => hnadleDelete(order._id, order.name)}
+                        onClick={() => handleDelete(order._id, order.name)}
                         className="btn mr-1 btn-xs bg-red-500 text-white border-none"
                       >
                         Cancel
