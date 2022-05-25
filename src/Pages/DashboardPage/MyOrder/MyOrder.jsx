@@ -52,7 +52,7 @@ const MyOrder = () => {
   }
   return (
     <div className="sm:px-10 px-2 pb-5">
-      <h5 className="text-lg text-left font-bold  mb-2 text-primary">
+      <h5 className="lg:text-3xl text-xl mb-4 text-center font-bold  text-yellow-500">
         My Orders
       </h5>
       <div class="relative  overflow-x-auto shadow-md sm:rounded-lg">
