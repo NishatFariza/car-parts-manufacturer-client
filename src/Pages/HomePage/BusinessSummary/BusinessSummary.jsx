@@ -12,7 +12,7 @@ const BusinessSummary = () => {
         <h2 className="md:text-4xl text-2xl font-semibold mb-2 text-black">
           Business Statics
         </h2>
-        <div className="h-1 w-24 rounded-lg bg-yellow-400 mx-auto"></div>
+        <div className="h-1 w-24 rounded-lg bg-yellow-600 mx-auto"></div>
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-7 pt-8 pb-16 px-8">
         <div className="lg:py-8 lg:px-16 py-10 px-6 border rounded  text-center card-shadow">

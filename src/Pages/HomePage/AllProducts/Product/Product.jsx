@@ -7,10 +7,10 @@ const Product = ({ product }) => {
     product;
   return (
     <div className="w-11/12 sm:w-auto mx-auto border rounded-xl box-shadow duration-500 cursor-pointer">
-      <div className="rounded-2xl flex justify-center items-center">
-        <img className="rounded-2xl" src={img} alt="" />
+      <div className="rounded-2xl flex justify-center items-center w-8/12 mx-auto">
+        <img className="rounded-2xl w-full " src={img} alt="" />
       </div>
-      <div className="lg:py-10 lg:px-6 py-10 px-6">
+      <div className="lg:py-6 lg:px-6 py-5 px-3">
         <h3 className="text-2xl font-semibold hover:text-yellow-600 duration-500 ">
           {name}
         </h3>
@@ -25,7 +25,7 @@ const Product = ({ product }) => {
         <p className="text-stone-700 mb-2">
           <strong>Price: </strong> ${price}
         </p>
-        <p title={description} className="text-stone-600">
+        <p title={description} className="text-stone-600 lg:text-base text-sm">
           {description.length >= 150
             ? `${description.slice(0, 150)}...`
             : description}
