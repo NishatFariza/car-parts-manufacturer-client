@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Loading from "../../../Shared/Loading/Loading";
 import Product from "../Product/Product";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const url = `http://localhost:5000/products`;
@@ -13,6 +15,16 @@ const Products = () => {
       // console.log(data);
     })();
   }, []);
+
+  useEffect(() => {
+    if (products.length > 0) {
+      setLoading(false);
+    }
+  }, [products]);
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
   return (
     <div className="lg:px-8">
       <div className="lg:w-6/12 md:w-8/12 sm:w-10/12 w-11/12 mx-auto text-center my-16">

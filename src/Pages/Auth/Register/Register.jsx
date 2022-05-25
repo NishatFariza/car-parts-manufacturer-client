@@ -8,6 +8,7 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import toast from "react-hot-toast";
+import Loading from "../../Shared/Loading/Loading";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -47,6 +48,10 @@ const Register = () => {
     console.log(data);
     createUserWithEmailAndPassword(data.email, data.password);
   };
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
   return (
     <div>
