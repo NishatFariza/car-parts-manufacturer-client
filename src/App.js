@@ -7,7 +7,13 @@ import Register from './Pages/Auth/Register/Register';
 import RequireAuth from './Pages/Auth/RequireAuth/RequireAuth';
 import Blogs from './Pages/Blogs/Blogs';
 import AddProducts from './Pages/DashboardPage/AddProducts/AddProducts';
+import AddReview from './Pages/DashboardPage/AddReview/AddReview';
 import Dashboard from './Pages/DashboardPage/Dashboard/Dashboard';
+import MakeAdmin from './Pages/DashboardPage/MakeAdmin/MakeAdmin';
+import ManageAllOrders from './Pages/DashboardPage/ManageAllOrders/ManageAllOrders';
+import ManageProducts from './Pages/DashboardPage/ManageProducts/ManageProducts';
+import MyOrder from './Pages/DashboardPage/MyOrder/MyOrder';
+import MyProfile from './Pages/DashboardPage/MyProfile/MyProfile';
 import Home from './Pages/HomePage/Home/Home';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import Footer from './Pages/Shared/Footer/Footer';
@@ -27,6 +33,15 @@ function App() {
          </RequireAuth>
        }>
          <Route path='addproducts' element={<AddProducts></AddProducts>}></Route>
+         <Route path='addreview' element={<AddReview></AddReview>}></Route>
+         <Route path='makeadmin' element={<MakeAdmin></MakeAdmin>}></Route>
+         <Route path='manageallorders' element={<ManageAllOrders></ManageAllOrders>}></Route>
+         <Route path='manageproducts' element={<ManageProducts></ManageProducts>}></Route>
+         <Route path='myorder' element={<MyOrder></MyOrder>}></Route>
+         <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
+        
+
+        
        </Route>
        <Route path='/login' element={<LogIn></LogIn>}></Route>
        <Route path='/register' element={<Register></Register>}></Route>

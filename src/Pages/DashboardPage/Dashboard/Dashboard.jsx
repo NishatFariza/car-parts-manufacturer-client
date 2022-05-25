@@ -24,44 +24,41 @@ const Dashboard = () => {
               </Link>
             </li>
             {/* {admin ? ( */}
-              <>
-                <li>
-                  <Link
-                    className="border my-1"
-                    to={"/dashboard/manageAllOrders"}
-                  >
-                    Manage All Orders
-                  </Link>
-                </li>
-                <li>
-                  <Link className="border my-1" to={"/dashboard/addproducts"}>
-                    Add a Product
-                  </Link>
-                </li>
-                <li>
-                  <Link className="border my-1" to={"/dashboard/manageProduct"}>
-                    Manage Product
-                  </Link>
-                </li>
-                <li>
-                  <Link className="border my-1" to={"/dashboard/makeAdmin"}>
-                    Make Admin
-                  </Link>
-                </li>
-              </>
+            <>
+              <li>
+                <Link className="border my-1" to={"/dashboard/manageAllOrders"}>
+                  Manage All Orders
+                </Link>
+              </li>
+              <li>
+                <Link className="border my-1" to={"/dashboard/addproducts"}>
+                  Add a Product
+                </Link>
+              </li>
+              <li>
+                <Link className="border my-1" to={"/dashboard/manageproducts"}>
+                  Manage Product
+                </Link>
+              </li>
+              <li>
+                <Link className="border my-1" to={"/dashboard/makeadmin"}>
+                  Make Admin
+                </Link>
+              </li>
+            </>
             {/* ) : ( */}
-              <>
-                <li>
-                  <Link className="border my-1" to={"/dashboard/myOrder"}>
-                    My Order
-                  </Link>
-                </li>
-                <li>
-                  <Link className="border  my-1" to={"/dashboard/addReview"}>
-                    Add a Review
-                  </Link>
-                </li>
-              </>
+            <>
+              <li>
+                <Link className="border my-1" to={"/dashboard/myorder"}>
+                  My Order
+                </Link>
+              </li>
+              <li>
+                <Link className="border  my-1" to={"/dashboard/addreview"}>
+                  Add a Review
+                </Link>
+              </li>
+            </>
             {/* )} */}
           </ul>
         </div>
