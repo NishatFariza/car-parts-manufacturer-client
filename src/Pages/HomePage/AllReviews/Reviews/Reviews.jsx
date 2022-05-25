@@ -18,13 +18,13 @@ const Reviews = () => {
   return (
     <div className="bg-[url('https://i.ibb.co/5WmVLKK/review-bg.webp')] bg-cover">
       <div className="lg:px-8">
-        <div className="lg:w-6/12 md:w-8/12 sm:w-10/12 w-11/12 mx-auto text-center py-16">
-          <h2 className="md:text-4xl text-2xl font-semibold mb-2 text-black">
+        <div className="lg:w-6/12 md:w-8/12 sm:w-10/12 w-11/12 mx-auto text-center lg:py-16 py-8">
+          <h2 className="md:text-4xl text-3xl font-semibold mb-2 text-black">
             Our Clients
           </h2>
           <div className="h-1 w-24 rounded-lg bg-yellow-600 mx-auto"></div>
         </div>
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-7 pb-20">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-5 lg:pb-20 pb-10">
           {reviews.map((review) => (
             <Review reviewUser={review} key={review._id}></Review>
           ))}

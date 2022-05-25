@@ -7,7 +7,7 @@ const NewsLatter = () => {
         <div className="lg:w-8/12 w-10/12 mx-auto text-center">
           <div className="text-center">
             <h4 className="primary-color lg:text-2xl md:text-xl text-sm lg:mb-3 mb-1">
-              SPECIAL <span className="text-yellow-400">OFFER</span> FOR
+              SPECIAL <span className="text-yellow-600">OFFER</span> FOR
               SUBSCRIPTION
             </h4>
             <h3 className="primary-color lg:text-4xl md:text-2xl text-xl text-center ">

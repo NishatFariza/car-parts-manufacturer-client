@@ -11,9 +11,9 @@ const Review = ({ reviewUser }) => {
       <div className="rounded-2xl flex justify-center items-center pt-10">
         <img className="rounded-full w-[80px] h-[80px]" src={img} alt="" />
       </div>
-      <div className="lg:py-10 lg:px-6 py-10 px-6 text-center ">
-        <h4>{name}</h4>
-        <Rating
+      <div className="lg:py-10 lg:px-6 py-5 px-3 text-center ">
+        <h4 className="lg:text-2xl text-xl">{name}</h4>
+        <Rating className="lg:my-4 my-2"
           initialRating={rating}
           emptySymbol={<FontAwesomeIcon icon={faStar} />}
           fullSymbol={
@@ -21,7 +21,7 @@ const Review = ({ reviewUser }) => {
           }
           readonly
         ></Rating>
-        <p title={review} className="text-stone-600">
+        <p title={review} className="text-stone-600 lg:text-base text-sm">
           {review.length >= 150 ? `${review.slice(0, 150)}...` : review}
         </p>
       </div>

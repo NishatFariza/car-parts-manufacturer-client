@@ -7,9 +7,9 @@ import "./BusinessSummary.css";
 
 const BusinessSummary = () => {
   return (
-    <div className="my-16">
+    <div className="lg:my-16 my-6">
       <div className="lg:w-6/12 md:w-8/12 sm:w-10/12 w-11/12 mx-auto text-center ">
-        <h2 className="md:text-4xl text-2xl font-semibold mb-2 text-black">
+        <h2 className="md:text-4xl text-3xl font-semibold mb-2 text-black">
           Business Statics
         </h2>
         <div className="h-1 w-24 rounded-lg bg-yellow-600 mx-auto"></div>

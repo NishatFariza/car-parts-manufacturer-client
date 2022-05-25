@@ -28,7 +28,7 @@ const Products = () => {
   return (
     <div className="lg:px-8">
       <div className="lg:w-6/12 md:w-8/12 sm:w-10/12 w-11/12 mx-auto text-center lg:my-16 my-8">
-        <h2 className="md:text-4xl text-2xl font-semibold mb-2 text-black">
+        <h2 className="md:text-4xl text-3xl font-semibold mb-2 text-black">
           OUR PRODUCTS
         </h2>
         <div className="h-1 w-24 rounded-lg bg-yellow-600 mx-auto"></div>
