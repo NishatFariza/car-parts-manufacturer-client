@@ -23,8 +23,7 @@ const MyProfile = () => {
   }
   console.log(profile.data);
 
-  const {  valueEducation, linkedin, phoneNumber,  address } =
-    profile?.data;
+  const { valueEducation, linkedin, phoneNumber, address } = profile?.data;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -60,7 +59,7 @@ const MyProfile = () => {
             My Information
           </h3>
         </div>
-        <div className="flex justify-between">
+        <div className="flex lg:flex-row flex-col justify-between">
           <div class="border-t text-left border-gray-200">
             <dl>
               <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -86,7 +85,7 @@ const MyProfile = () => {
                   Street Address
                 </dt>
                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                  { address}
+                  {address}
                 </dd>
               </div>
               <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -103,7 +102,7 @@ const MyProfile = () => {
               </div>
             </dl>
           </div>
-          <div class="border-t py-10 text-left border-gray-200 w-6/12">
+          <div class="border-t py-10 text-left border-gray-200 lg:w-6/12 w-11/12 mx-auto">
             <form onSubmit={handleSubmit}>
               <div class="relative z-0 w-full mb-6 group">
                 <input
