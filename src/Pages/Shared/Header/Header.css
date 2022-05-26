@@ -1,0 +1,19 @@
+
+nav a{
+    font-size: 15px;
+    line-height: 52px;
+    font-weight: 500;
+    margin-right: 0px;
+    padding-bottom: 8px;
+}
+nav li{
+   
+    padding: 0;
+    margin: 0;
+}
+
+.activeLink{
+    color: #ffb20d;
+    border-bottom: 2px solid #fff;
+   
+}

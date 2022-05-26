@@ -3,12 +3,15 @@ import React, { useEffect, useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 import SocialAuth from "../SocialAuth/SocialAuth";
 
 const LogIn = () => {
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   // console.log(email);
@@ -21,6 +24,14 @@ const LogIn = () => {
     handleSubmit,
     reset,
   } = useForm();
+
+  useEffect(() => {
+    if (user) {
+      toast.success("LogIn Successful");
+
+      navigate(from, { replace: true });
+    }
+  }, [user]);
 
   if (user) {
     navigate("/");

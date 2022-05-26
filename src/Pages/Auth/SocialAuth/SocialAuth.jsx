@@ -2,12 +2,14 @@ import React, { useEffect } from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import useToken from "../../../useToken/useToken";
 import Loading from "../../Shared/Loading/Loading";
 
 const SocialAuth = () => {
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   const [token] = useToken(user);
@@ -15,6 +17,13 @@ const SocialAuth = () => {
   if (user) {
     navigate("/");
   }
+
+  useEffect(() => {
+    if (user) {
+      toast.success("LogIn Successful");
+      navigate(from, { replace: true });
+    }
+  }, [navigate, user, from]);
 
   useEffect(() => {
     if (error) {

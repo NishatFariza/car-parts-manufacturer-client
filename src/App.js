@@ -16,6 +16,8 @@ import MyOrder from './Pages/DashboardPage/MyOrder/MyOrder';
 import MyProfile from './Pages/DashboardPage/MyProfile/MyProfile';
 import Home from './Pages/HomePage/Home/Home';
 import MyPortfolio from './Pages/MyPortfolioPage/MyPortfolio/MyPortfolio';
+import Purchase from './Pages/Purchase/Purchase';
+
 
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
@@ -48,6 +50,7 @@ function App() {
        <Route path='/register' element={<Register></Register>}></Route>
        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
        <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+       <Route path='/purchase/:id' element={<Purchase></Purchase>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
      </Routes>
      <Footer></Footer>

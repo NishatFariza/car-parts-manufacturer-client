@@ -8,7 +8,6 @@ import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 
 const MyOrder = () => {
-  // const [orders, setOrders] = useState([])
   const [user, loading] = useAuthState(auth);
 
   const {
@@ -19,7 +18,7 @@ const MyOrder = () => {
   } = useQuery("orders", () =>
     axiosPrivate.get(`http://localhost:5000/orders/${user.email}`)
   );
-  const hnadleDelete = (id, name) => {
+  const handleDelete = (id, name) => {
     console.log(id);
 
     Swal.fire({
@@ -40,7 +39,7 @@ const MyOrder = () => {
               Swal.fire("Canceled!", `${name} has been Canceled.`, "success");
               refetch();
             } else {
-              toast.error("Somthing is Wrong !");
+              toast.error("Something is Wrong !");
             }
           });
       }
@@ -67,7 +66,7 @@ const MyOrder = () => {
                 Total Price
               </th>
               <th scope="col" class="py-2 text-center sm:py-3">
-                Quanity
+                Quantity
               </th>
               <th scope="col" class="py-2 text-center sm:py-3">
                 Payment
@@ -98,7 +97,7 @@ const MyOrder = () => {
                     {!order.pay ? (
                       <>
                         <button
-                          onClick={() => hnadleDelete(order._id, order.name)}
+                          onClick={() => handleDelete(order._id, order.name)}
                           className="btn mr-1 btn-xs bg-red-500 text-white border-none"
                         >
                           Cancel
