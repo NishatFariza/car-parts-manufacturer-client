@@ -12,7 +12,7 @@ const MakeAdmin = () => {
     data: users,
     refetch,
   } = useQuery("users", () => axiosPrivate.get(`http://localhost:5000/users`));
-  // console.log(users?.data);
+  console.log(users?.data);
 
   if (isLoading) {
     return <Loading></Loading>;
