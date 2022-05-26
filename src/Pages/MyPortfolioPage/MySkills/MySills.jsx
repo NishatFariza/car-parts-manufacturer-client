@@ -14,54 +14,54 @@ import skil12 from "../../../images/js.png";
 
 const MySills = () => {
   return (
-    <div className="w-11/12 mx-auto lg:my-20 my-10">
+    <div className="w-11/12 mx-auto lg:my-12 my-8">
       <h3 className="lg:text-4xl text-2xl text-center font-bold">Skills</h3>
-      <div className="flex ">
-        <div className="">
+      <div className="flex justify-evenly flex-wrap mt-8 ">
+        <div className="rounded-lg w-36 m-5 cursor-pointer justify-center items-center h-32  flex flex-col card-shadow">
           <img className="w-4/12" src={skil12} alt="" />
           <h4 className="lg:text-xl text-sm text-center">JavaScript</h4>
         </div>
-        <div className="">
+        <div className="rounded-lg w-36 m-5 cursor-pointer justify-center items-center h-32  flex flex-col card-shadow">
           <img className="w-4/12" src={skil10} alt="" />
           <h4 className="lg:text-xl text-sm text-center">JavaScript</h4>
         </div>
-        <div className="">
+        <div className="rounded-lg w-36 m-5 cursor-pointer justify-center items-center h-32  flex flex-col card-shadow">
           <img className="w-4/12" src={skil11} alt="" />
           <h4 className="lg:text-xl text-sm text-center">JavaScript</h4>
         </div>
-        <div className="">
+        <div className="rounded-lg w-36 m-5 cursor-pointer justify-center items-center h-32  flex flex-col card-shadow">
           <img className="w-4/12" src={skil9} alt="" />
           <h4 className="lg:text-xl text-sm text-center">JavaScript</h4>
         </div>
-        <div className="">
+        <div className="rounded-lg w-36 m-5 cursor-pointer justify-center items-center h-32  flex flex-col card-shadow">
           <img className="w-4/12" src={skil8} alt="" />
           <h4 className="lg:text-xl text-sm text-center">JavaScript</h4>
         </div>
-        <div className="">
+        <div className="rounded-lg w-36 m-5 cursor-pointer justify-center items-center h-32  flex flex-col card-shadow">
           <img className="w-4/12" src={skil7} alt="" />
           <h4 className="lg:text-xl text-sm text-center">JavaScript</h4>
         </div>
-        <div className="">
+        <div className="rounded-lg w-36 m-5 cursor-pointer justify-center items-center h-32  flex flex-col card-shadow">
           <img className="w-4/12" src={skil6} alt="" />
           <h4 className="lg:text-xl text-sm text-center">JavaScript</h4>
         </div>
-        <div className="">
+        <div className="rounded-lg w-36 m-5 cursor-pointer justify-center items-center h-32  flex flex-col card-shadow">
           <img className="w-4/12" src={skil5} alt="" />
           <h4 className="lg:text-xl text-sm text-center">JavaScript</h4>
         </div>
-        <div className="">
+        <div className="rounded-lg w-36 m-5 cursor-pointer justify-center items-center h-32  flex flex-col card-shadow">
           <img className="w-4/12" src={skil4} alt="" />
           <h4 className="lg:text-xl text-sm text-center">JavaScript</h4>
         </div>
-        <div className="">
+        <div className="rounded-lg w-36 m-5 cursor-pointer justify-center items-center h-32  flex flex-col card-shadow">
           <img className="w-4/12" src={skil3} alt="" />
           <h4 className="lg:text-xl text-sm text-center">JavaScript</h4>
         </div>
-        <div className="">
+        <div className="rounded-lg w-36 m-5 cursor-pointer justify-center items-center h-32  flex flex-col card-shadow">
           <img className="w-4/12" src={skil2} alt="" />
           <h4 className="lg:text-xl text-sm text-center">JavaScript</h4>
         </div>
-        <div className="">
+        <div className="rounded-lg w-36 m-5 cursor-pointer justify-center items-center h-32  flex flex-col card-shadow">
           <img className="w-4/12" src={skil1} alt="" />
           <h4 className="lg:text-xl text-sm text-center">JavaScript</h4>
         </div>

@@ -7,7 +7,7 @@ const MyProjects = () => {
   return (
     <div className="w-11/12 mx-auto lg:my-16 my-6">
       <h4 className="lg:text-4xl text-2xl text-center font-bold">Projects</h4>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:mt-10 gap-5">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:mt-16 mt-6 gap-5">
         <div className="text-center border-4 border-yellow-600 rounded-xl lg:py-8 py-4">
           <div className="w-10/12 mx-auto  rounded-xl">
             <img
