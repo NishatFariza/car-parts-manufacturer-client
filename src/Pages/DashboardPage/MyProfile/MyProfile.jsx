@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useQuery } from "react-query";
 import axiosPrivate from "../../../Api/axiosPrivate";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
+import toast from "react-hot-toast";
 
 const MyProfile = () => {
   const [user, loading] = useAuthState(auth);
-  const [updateProfile, setUpdateProfile] = useState(null);
 
   const {
     isLoading,
@@ -21,9 +21,9 @@ const MyProfile = () => {
   if (isLoading || loading) {
     return <Loading></Loading>;
   }
-  // console.log(profile.data);
+  console.log(profile.data);
 
-  const { country, education, linkedinProfile, number, streetAddress } =
+  const {  valueEducation, linkedin, phoneNumber,  address } =
     profile?.data;
 
   const handleSubmit = (e) => {
@@ -39,7 +39,17 @@ const MyProfile = () => {
       valueEducation,
       linkedin,
     };
-    setUpdateProfile(updateProfile);
+
+    axiosPrivate
+      .put(`http://localhost:5000/profile/${user?.email}`, updateProfile)
+      .then((data) => {
+        console.log(data.data);
+        if ((data.data.matchedCount || data.data.upsertedCount) > 0) {
+          toast.success("Your profile is Updated");
+          refetch();
+          e.target.value.reset();
+        }
+      });
   };
 
   return (
@@ -68,7 +78,7 @@ const MyProfile = () => {
               <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt class="text-sm font-medium text-gray-500">Number</dt>
                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                  {number}
+                  {phoneNumber}
                 </dd>
               </div>
               <div class="bg-white px-4 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -76,19 +86,19 @@ const MyProfile = () => {
                   Street Address
                 </dt>
                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                  {streetAddress}, {country}
+                  { address}
                 </dd>
               </div>
               <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt class="text-sm font-medium text-gray-500">Education</dt>
                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                  {education}
+                  {valueEducation}
                 </dd>
               </div>
               <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt class="text-sm font-medium text-gray-500">Linkedin</dt>
                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                  {linkedinProfile}
+                  {linkedin}
                 </dd>
               </div>
             </dl>

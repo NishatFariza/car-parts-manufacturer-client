@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import LogIn from './Pages/Auth/LogIn/LogIn';
 import Register from './Pages/Auth/Register/Register';
+import RequireAdmin from './Pages/Auth/RequireAdmin/RequireAdmin';
 import RequireAuth from './Pages/Auth/RequireAuth/RequireAuth';
 import Blogs from './Pages/Blogs/Blogs';
 import AddProducts from './Pages/DashboardPage/AddProducts/AddProducts';
@@ -35,11 +36,27 @@ function App() {
            <Dashboard></Dashboard>
          </RequireAuth>
        }>
-         <Route path='addproducts' element={<AddProducts></AddProducts>}></Route>
+         <Route path='addproducts' element={
+           <RequireAdmin>
+             <AddProducts></AddProducts>
+           </RequireAdmin>
+         }></Route>
          <Route path='addreview' element={<AddReview></AddReview>}></Route>
-         <Route path='makeadmin' element={<MakeAdmin></MakeAdmin>}></Route>
-         <Route path='manageallorders' element={<ManageAllOrders></ManageAllOrders>}></Route>
-         <Route path='manageproducts' element={<ManageProducts></ManageProducts>}></Route>
+         <Route path='makeadmin' element={
+           <RequireAdmin>
+             <MakeAdmin></MakeAdmin>
+           </RequireAdmin>
+         }></Route>
+         <Route path='manageallorders' element={
+           <RequireAdmin>
+             <ManageAllOrders></ManageAllOrders>
+           </RequireAdmin>
+         }></Route>
+         <Route path='manageproducts' element={
+           <RequireAdmin>
+             <ManageProducts></ManageProducts>
+           </RequireAdmin>
+         }></Route>
          <Route path='myorder' element={<MyOrder></MyOrder>}></Route>
          <Route index element={<MyProfile></MyProfile>}></Route>
         

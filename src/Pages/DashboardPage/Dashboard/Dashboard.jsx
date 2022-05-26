@@ -1,7 +1,13 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
+import auth from "../../../firebase.init";
+import useAdmin from "../../../Hooks/useAdmin";
 
 const Dashboard = () => {
+  let [user, loading, error] = useAuthState(auth);
+  let [admin, adminLoading] = useAdmin(user);
+  // console.log(admin);
   return (
     <div className="">
       <div className="bg-[url('https://i.ibb.co/Qj8JDbk/page-header-bg.webp')] bg-cover md:h-[40vh] h-[40vh] flex flex-col justify-center items-center ">
@@ -23,43 +29,49 @@ const Dashboard = () => {
                 My Profile
               </Link>
             </li>
-            {/* {admin ? ( */}
-            <>
-              <li>
-                <Link className="border my-1" to={"/dashboard/manageallorders"}>
-                  Manage All Orders
-                </Link>
-              </li>
-              <li>
-                <Link className="border my-1" to={"/dashboard/addproducts"}>
-                  Add a Product
-                </Link>
-              </li>
-              <li>
-                <Link className="border my-1" to={"/dashboard/manageproducts"}>
-                  Manage Product
-                </Link>
-              </li>
-              <li>
-                <Link className="border my-1" to={"/dashboard/makeadmin"}>
-                  Make Admin
-                </Link>
-              </li>
-            </>
-            {/* ) : ( */}
-            <>
-              <li>
-                <Link className="border my-1" to={"/dashboard/myorder"}>
-                  My Order
-                </Link>
-              </li>
-              <li>
-                <Link className="border  my-1" to={"/dashboard/addreview"}>
-                  Add a Review
-                </Link>
-              </li>
-            </>
-            {/* )} */}
+            {admin ? (
+              <>
+                <li>
+                  <Link
+                    className="border my-1"
+                    to={"/dashboard/manageallorders"}
+                  >
+                    Manage All Orders
+                  </Link>
+                </li>
+                <li>
+                  <Link className="border my-1" to={"/dashboard/addproducts"}>
+                    Add a Product
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="border my-1"
+                    to={"/dashboard/manageproducts"}
+                  >
+                    Manage Product
+                  </Link>
+                </li>
+                <li>
+                  <Link className="border my-1" to={"/dashboard/makeadmin"}>
+                    Make Admin
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link className="border my-1" to={"/dashboard/myorder"}>
+                    My Order
+                  </Link>
+                </li>
+                <li>
+                  <Link className="border  my-1" to={"/dashboard/addreview"}>
+                    Add a Review
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>

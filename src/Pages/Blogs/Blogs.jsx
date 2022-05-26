@@ -86,12 +86,15 @@ const Blogs = () => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel className="border-y ">
-              <p className="sm:px-6 px-3 sm:text-base text-sm pt-3 border-t">
-                <strong className="underline primary-color font-bold text-justify">
-                  SQL:
-                </strong>
-                Also a lot of independent consultations are there who can help
-                you with SQL database for a very large scale deployments.
+              <p className="sm:px-6 px-3 py-3 sm:text-base text-sm pt-3 border-t">
+                Every object with its methods and properties contains an
+                internal and hidden property known as [[Prototype]]. The
+                Prototypal Inheritance is a feature in javascript used to add
+                methods and properties in objects. It is a method by which an
+                object can inherit the properties and methods of another object.
+                Traditionally, in order to get and set the [[Prototype]] of an
+                object, we use Object.getPrototypeOf and Object.setPrototypeOf.
+                Nowadays, in modern language, it is being set using __proto__.
               </p>
             </AccordionItemPanel>
           </AccordionItem>
@@ -104,30 +107,19 @@ const Blogs = () => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="sm:px-6 px-3 sm:text-base text-sm pt-3 border-t">
-                <strong className="underline primary-color font-bold text-justify">
-                  JWT:
-                </strong>
-                the signature also certifies that only the party holding the
-                private key is the one that signed it.
-              </p>
-            </AccordionItemPanel>
-          </AccordionItem>
-          <AccordionItem className="box-shadow border-b rounded duration-500">
-            <AccordionItemHeading className=" py-6 sm:px-3 px-0 rounded hover:text-yellow-500 text-black cursor-pointer">
-              <AccordionItemButton className="lg:text-xl text-sm font-bold duration-300 flex items-start">
-                You have an array of products. Each product has a name, price,
-                description, etc. How will you implement a search to find
-                products by name?
-              </AccordionItemButton>
-            </AccordionItemHeading>
-            <AccordionItemPanel>
-              <p className="sm:px-6 px-3 sm:text-base text-sm pt-3 border-t">
-                <strong className="underline primary-color font-bold text-justify">
-                  JWT:
-                </strong>
-                the signature also certifies that only the party holding the
-                private key is the one that signed it.
+              <p className="sm:px-6 px-3 py-3 sm:text-base text-sm pt-3 border-t">
+                The useState hook is a special function that takes the initial
+                state as an argument and returns an array of two entries.
+                Syntax: The first element is the initial state and the second
+                one is a function that is used for updating the state. In most
+                programming languages, that is a function, a subroutine, a
+                method or property. The isolated part of the definition is
+                important. In his book "Working Effectively with Legacy Code",
+                author Michael Feathers states that such tests are not unit
+                tests when they rely on external systems: “If it talks to the
+                database, it talks across the network, it touches the file
+                system, it requires system configuration, or it can't be run at
+                the same time as any other test."
               </p>
             </AccordionItemPanel>
           </AccordionItem>
@@ -138,20 +130,48 @@ const Blogs = () => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="sm:px-6 px-3 sm:text-base text-sm pt-3 border-t">
-                <strong className="underline primary-color font-bold text-justify">
-                  JWT:
+              <p className="sm:px-6 px-3 sm:text-base text-sm py-3 border-t">
+                <strong className="underline font-bold text-justify">
+                  Unit Test:
                 </strong>
-                the signature also certifies that only the party holding the
-                private key is the one that signed it.
+                A unit test verifies the behavior of a unit of software in the
+                system. It verifies whether a small and isolated piece of the
+                codebase called “unit” behaves as the developer intended. Unit
+                tests verify the smallest parts or components of an application
+                by comparing their actual behavior with the expected behavior in
+                complete isolation. Here, “complete isolation” means that,
+                during unit testing, devs do not connect the application with
+                external dependencies such as databases, the filesystem, or HTTP
+                services. This allows unit tests to be fast and stable since
+                they won't fail due to problems integrating with those external
+                services.
               </p>
-              <p className="sm:px-6 px-3 sm:text-base text-sm py-8">
-                <strong className="underline primary-color font-bold">
-                  Jwt Work:
+              <p className="sm:px-6 px-3 sm:text-base text-sm py-3 border-t">
+                <strong className="underline font-bold text-justify">
+                  Reason Write Unit Tests:
                 </strong>
-                The payload And The signature. The JOSE (JSON Object Signing and
-                Encryption) header contains the type of token JWT in this case
-                and the signing algorithm.
+                Usually, developers write unit tests first, then write the
+                software code. This approach is known as test-driven development
+                (TDD). In TDD, the requirements are turned into specific test
+                cases, then the software is improved to pass the new tests. In
+                the case of unit tests, it allows for the modification of code
+                without affecting the functionality of other units or the
+                software in its entirety. This makes the job easier for
+                developers as the bugs are easy to locate at this stage, which
+                saves time and money.
+              </p>
+              <p className="sm:px-6 px-3 sm:text-base text-sm py-3 border-t">
+                <strong className="underline text-sm font-bold text-justify">
+                  Benefits of Unit Tests:
+                </strong>
+                <li>
+                  Unit tests help to find and fix bugs quickly and easily.
+                </li>
+                <li>Unit tests contribute to higher code quality.</li>
+                <li>
+                  Unit tests contribute to better application architecture.
+                </li>
+                <li>Unit tests act as documentation.</li>
               </p>
             </AccordionItemPanel>
           </AccordionItem>

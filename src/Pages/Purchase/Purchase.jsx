@@ -60,7 +60,6 @@ const Purchase = () => {
     const quantity = parseInt(e.target.value);
     const aviableQu = parseInt(availableQuantity);
     const minimumQu = parseInt(minimumOrder);
-    // console.log(quantity, minimumQu, aviableQu);
     setQuantity(quantity);
     if (quantity < minimumQu) {
       setQuantityError(`You Have to Purchase AtLeast ${minimumOrder} Products`);
