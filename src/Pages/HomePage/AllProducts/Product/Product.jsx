@@ -32,7 +32,7 @@ const Product = ({ product }) => {
         </p>
         <button
           onClick={() => navigate(`/inventory/${product._id}`)}
-          className="border border-yellow-600 px-6 py-2 hover:bg-yellow-600 hover:text-black duration-500 mt-4 font-semibold text-stone-600"
+          className="border border-yellow-600 px-6 py-2 hover:bg-yellow-600 hover:text-black duration-500 my-4 font-semibold text-stone-600"
         >
           Purchase Now
         </button>
