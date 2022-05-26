@@ -15,7 +15,7 @@ import skil12 from "../../../images/js.png";
 const MySills = () => {
   return (
     <div className="w-11/12 mx-auto lg:my-20 my-10">
-      <h3 className="lg:text-4xl text-2xl text-center font-bold">Skill</h3>
+      <h3 className="lg:text-4xl text-2xl text-center font-bold">Skills</h3>
       <div className="flex ">
         <div className="">
           <img className="w-4/12" src={skil12} alt="" />

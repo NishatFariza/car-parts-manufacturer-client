@@ -19,9 +19,11 @@ const AboutMe = () => {
           handle it professionally. Handle difficulties and errors efficient
           way. Try to keep myself with new technologies and learn that.
         </p>
-        <button className="border border-yellow-600 px-6 py-2 hover:bg-yellow-600 text-black duration-500 lg:mt-4 mt-6 transition w-30 mx-auto text-center rounded cursor-pointer">
-          GIT HUB
-        </button>
+        <a href="https://github.com/NishatFariza" target="_blank" alt="">
+          <button className="border border-yellow-600 px-6 py-2 hover:bg-yellow-600 text-black duration-500 lg:mt-4 mt-6 transition w-30 mx-auto text-center rounded cursor-pointer">
+            GIT HUB
+          </button>
+        </a>
       </div>
     </div>
   );
