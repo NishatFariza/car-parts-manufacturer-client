@@ -7,7 +7,7 @@ import auth from "../../firebase.init";
 import Loading from "../Shared/Loading/Loading";
 
 const Purchase = () => {
-  const [partDetail, setPartDetail] = useState(null);
+  const [productDetail, setProductDetail] = useState(null);
   const [product, setProduct] = useState({});
   const [quanity, setQuantity] = useState(null);
   const [quanityError, setQuantityError] = useState(null);
@@ -17,7 +17,6 @@ const Purchase = () => {
 
   useEffect(() => {
     axiosPrivate.get(`http://localhost:5000/product/${id}`).then((data) => {
-
       setProduct(data.data);
       setQuantity(data.data.quantity);
       setPLoading(false);
@@ -28,7 +27,13 @@ const Purchase = () => {
     return <Loading></Loading>;
   }
 
-  const { img, name, price, minimumOrder: minimumOrder, availableQuantity: availableQuantity } = product;
+  const {
+    img,
+    name,
+    price,
+    minimumOrder: minimumOrder,
+    availableQuantity: availableQuantity,
+  } = product;
   // console.log(part);
   const handlePurchase = (event) => {
     event.preventDefault();
@@ -61,9 +66,7 @@ const Purchase = () => {
   const handleQuantity = (e) => {
     setQuantity(e.target.value);
     if (e.target.value < minimumOrder) {
-      setQuantityError(
-        `You Have to Purchase AtLeast ${minimumOrder} Products`
-      );
+      setQuantityError(`You Have to Purchase AtLeast ${minimumOrder} Products`);
       return;
     }
     if (e.target.value > availableQuantity) {
@@ -73,7 +76,6 @@ const Purchase = () => {
     setQuantityError(null);
   };
 
- 
   return (
     <div style={{ fontFamily: "Merriweather" }} className="my-[64px]">
       <div className="flex justify-evenly flex-col-reverse sm:flex-row pt-8 sm:pt-20 w-11/12 sm:container mx-auto">
@@ -193,8 +195,7 @@ const Purchase = () => {
             <div className="flex justify-center mb-3 sm:mb-0">
               <button
                 disabled={
-                  (quanity < minimumOrder ||
-                    quanity > availableQuantity) &&
+                  (quanity < minimumOrder || quanity > availableQuantity) &&
                   true
                 }
                 type="submit"
@@ -212,7 +213,7 @@ const Purchase = () => {
               </button>
 
               <label
-                onClick={() => setPartDetail(true)}
+                onClick={() => setProductDetail(true)}
                 for="purchase-modal"
                 style={{
                   fontFamily: "Open Sans, sans-serif",

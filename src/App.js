@@ -41,7 +41,7 @@ function App() {
          <Route path='manageallorders' element={<ManageAllOrders></ManageAllOrders>}></Route>
          <Route path='manageproducts' element={<ManageProducts></ManageProducts>}></Route>
          <Route path='myorder' element={<MyOrder></MyOrder>}></Route>
-         <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
+         <Route index element={<MyProfile></MyProfile>}></Route>
         
 
         

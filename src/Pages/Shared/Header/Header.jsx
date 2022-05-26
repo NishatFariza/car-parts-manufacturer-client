@@ -30,9 +30,14 @@ const Header = () => {
     <div>
       <header className={`${styles.header}  px-2 `}>
         <div className={styles.nav}>
+          <label htmlFor="dashboard-drower" className={styles.hambager}>
+            <i className="text-xl text-yellow-600">
+              <RiBarChartHorizontalFill />
+            </i>
+          </label>
           <Link to="/">
             <div className={styles.logoWrapper}>
-              <img className="md:w-4/12 w-4/12 " src={logo} alt="" />
+              <img className="md:w-4/12 w-4/12  " src={logo} alt="" />
             </div>
           </Link>
 

@@ -98,11 +98,11 @@ const MyOrder = () => {
                       <>
                         <button
                           onClick={() => handleDelete(order._id, order.name)}
-                          className="btn mr-1 btn-xs bg-red-500 text-white border-none"
+                          className="btn mr-1 btn-xs bg-yellow-500 text-white border-none"
                         >
                           Cancel
                         </button>
-                        <button className="btn btn-xs bg-success text-white border-none">
+                        <button className="btn btn-xs text-white border-none">
                           Pay
                         </button>
                       </>
