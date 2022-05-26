@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useQuery } from "react-query";
 import axiosPrivate from "../../../Api/axiosPrivate";
@@ -7,6 +7,7 @@ import Loading from "../../Shared/Loading/Loading";
 
 const MyProfile = () => {
   const [user, loading] = useAuthState(auth);
+  const [updateProfile, setUpdateProfile] = useState(null);
 
   const {
     isLoading,
@@ -22,8 +23,24 @@ const MyProfile = () => {
   }
   // console.log(profile.data);
 
-  const { cuntry, education, linkedinProfile, number, streetAddress } =
+  const { country, education, linkedinProfile, number, streetAddress } =
     profile?.data;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const phoneNumber = e.target.PhoneNumber.value;
+    const address = e.target.address.value;
+    const valueEducation = e.target.valueEducation.value;
+    const linkedin = e.target.linkedin.value;
+
+    const updateProfile = {
+      phoneNumber,
+      address,
+      valueEducation,
+      linkedin,
+    };
+    setUpdateProfile(updateProfile);
+  };
 
   return (
     <div className="">
@@ -59,7 +76,7 @@ const MyProfile = () => {
                   Street Address
                 </dt>
                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                  {streetAddress}, {cuntry}
+                  {streetAddress}, {country}
                 </dd>
               </div>
               <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -77,15 +94,15 @@ const MyProfile = () => {
             </dl>
           </div>
           <div class="border-t py-10 text-left border-gray-200 w-6/12">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div class="relative z-0 w-full mb-6 group">
                 <input
                   type="number"
-                  name="Phone Number"
+                  name="PhoneNumber"
                   id="floating_number"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
-                  required=""
+                  required
                 />
                 <label
                   for="floating_number"
@@ -98,11 +115,11 @@ const MyProfile = () => {
                 <div class="relative z-0 w-full mb-6 group">
                   <input
                     type="text"
-                    name="floating_first_name"
+                    name="address"
                     id="floating_first_name"
                     class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     placeholder=" "
-                    required=""
+                    required
                   />
                   <label
                     for="floating_first_name"
@@ -114,11 +131,11 @@ const MyProfile = () => {
                 <div class="relative z-0 w-full mb-6 group">
                   <input
                     type="text"
-                    name="floating_last_name"
+                    name="valueEducation"
                     id="floating_last_name"
                     class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     placeholder=" "
-                    required=""
+                    required
                   />
                   <label
                     for="floating_last_name"
@@ -132,11 +149,11 @@ const MyProfile = () => {
                 <div class="relative z-0 w-full mb-6 group">
                   <input
                     type="text"
-                    name="floating_company"
+                    name="linkedin"
                     id="floating_company"
                     class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     placeholder=" "
-                    required=""
+                    required
                   />
                   <label
                     for="floating_company"

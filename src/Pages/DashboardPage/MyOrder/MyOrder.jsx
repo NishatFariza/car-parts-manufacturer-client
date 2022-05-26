@@ -88,10 +88,10 @@ const MyOrder = () => {
                   </th>
                   <td class="py-2 w-60  text-[13px] sm:py-4">{order.name}</td>
                   <td class="py-2 text-[13px]  text-center sm:py-4">
-                    {order.unitPrice}
+                    {order.totalPrice}
                   </td>
                   <td class="py-2 text-[13px] text-center sm:py-4">
-                    {order.quanity}
+                    {order.quantity}
                   </td>
                   <td class="py-2 text-[13px] text-center sm:py-4">
                     {!order.pay ? (

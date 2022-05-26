@@ -23,11 +23,18 @@ const Blogs = () => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel className="border-b">
-              <p className="sm:px-6 px-3 pt-3 border-t sm:text-base text-sm">
-                <strong className="underline primary-color font-bold text-justify">
-                  Ja:
-                </strong>
-                language that is used for writing
+              <p className="sm:px-6 px-3 py-3 border-t sm:text-base text-sm">
+                During the initial rendering process, React builds a DOM tree of
+                components. So, when data changes in the DOM tree, we want React
+                to re-render only those components that were affected by the
+                change, skipping the other components in the tree that were not
+                affected. However, React could end up re-rendering all
+                components in the DOM tree, even though not all are affected.
+                This will result in longer loading time, wasted time, and even
+                wasted CPU resources. We need to prevent this from happening.
+                So, this is where we will focus our optimization effort. In this
+                situation, we could configure every component to only render or
+                diff when necessary, to avoid wasting resources and time.
               </p>
             </AccordionItemPanel>
           </AccordionItem>
@@ -39,15 +46,36 @@ const Blogs = () => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <p className="sm:px-6 px-3 sm:text-base text-sm pt-3 border-t">
-                <strong className="underline primary-color font-bold text-justify">
-                  Reasons for using NodeJS:
+              <p className="sm:px-6 px-3 sm:text-base text-sm pt-3 py-3 border-t">
+                <strong className="underline mb-3  font-bold text-justify">
+                  The Four Kinds of React State to Manage:
                 </strong>
-                Nodejs is a Javascript engine that you can write any application
-                <p className="mt-3">
-                  So, if you want to write some kind of stand-alone program or
-                  server in Javascript, then you can use nodejs for it.
-                </p>
+                <li>
+                  Local (UI) state- Local state is data we manage in one or
+                  another component. Local state is most often managed in React
+                  using the useState hook.
+                </li>
+                <li>
+                  Global (UI) state- Global state is data we manage across
+                  multiple components. Global state is necessary when we want to
+                  get and update data anywhere in our app, or in multiple
+                  components at least.
+                </li>
+                <li>
+                  Server state- Data that comes from an external server that
+                  must be integrated with our UI state. Server state is a simple
+                  concept, but can be hard to manage alongside all of our local
+                  and global UI state.
+                </li>
+                <li>
+                  URL state- Data that exists on our URLs, including the
+                  pathname and query parameters. URL state is often missing as a
+                  category of state, but it is an important one. In many cases,
+                  a lot of major parts of our application rely upon accessing
+                  URL state. Try to imagine building a blog without being able
+                  to fetch a post based off of its slug or id that is located in
+                  the URL!
+                </li>
               </p>
             </AccordionItemPanel>
           </AccordionItem>
