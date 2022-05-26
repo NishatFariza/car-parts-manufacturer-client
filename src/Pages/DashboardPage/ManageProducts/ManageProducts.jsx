@@ -11,7 +11,9 @@ const ManageProducts = () => {
     error,
     data: products,
     refetch,
-  } = useQuery("products", () => axiosPrivate.get("http://localhost:5000/products"));
+  } = useQuery("products", () =>
+    axiosPrivate.get("https://salty-bayou-55799.herokuapp.com/products")
+  );
 
   const handleDelete = (id, name) => {
     // console.log(id);
@@ -26,22 +28,23 @@ const ManageProducts = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axiosPrivate.delete(`http://localhost:5000/product/${id}`).then((data) => {
-          // console.log(data.data);
-          if (data.data.deletedCount > 0) {
-            Swal.fire("Deleted!", `${name} has been Deleted.`, "success");
-            refetch();
-          } else {
-            toast.error("Something is Wrong !");
-          }
-        });
+        axiosPrivate
+          .delete(`https://salty-bayou-55799.herokuapp.com/product/${id}`)
+          .then((data) => {
+            // console.log(data.data);
+            if (data.data.deletedCount > 0) {
+              Swal.fire("Deleted!", `${name} has been Deleted.`, "success");
+              refetch();
+            } else {
+              toast.error("Something is Wrong !");
+            }
+          });
       }
     });
   };
   if (isLoading) {
     return <Loading></Loading>;
   }
-  
 
   return (
     <div className="sm:px-10 px-2 pb-5">
