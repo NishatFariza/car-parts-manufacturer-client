@@ -1,12 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Fade from 'react-reveal/Fade';
 
 const Product = ({ product }) => {
   const navigate = useNavigate();
   const { name, img, price, description, minimumOrder, availableQuantity } =
     product;
   return (
-    <div className="w-11/12 sm:w-auto mx-auto border rounded-xl box-shadow duration-500 cursor-pointer">
+    <Fade top>
+      <div className="w-11/12 sm:w-auto mx-auto border rounded-xl box-shadow duration-500 cursor-pointer">
       <div className="rounded-2xl flex justify-center items-center w-8/12 mx-auto">
         <img className="rounded-2xl w-full " src={img} alt="" />
       </div>
@@ -38,6 +40,7 @@ const Product = ({ product }) => {
         </button>
       </div>
     </div>
+    </Fade>
   );
 };
 

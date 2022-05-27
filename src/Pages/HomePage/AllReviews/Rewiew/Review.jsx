@@ -2,12 +2,14 @@ import React from "react";
 import Rating from "react-rating";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Fade from 'react-reveal/Fade';
 
 const Review = ({ reviewUser }) => {
   const { name, img, review, rating } = reviewUser;
 
   return (
-    <div className="w-11/12 sm:w-auto mx-auto border rounded-xl box-shadow duration-500 cursor-pointer bg-white">
+    <Fade top>
+      <div className="w-11/12 sm:w-auto mx-auto border rounded-xl box-shadow duration-500 cursor-pointer bg-white">
       <div className="rounded-2xl flex justify-center items-center pt-10">
         <img className="rounded-full w-[80px] h-[80px]" src={img} alt="" />
       </div>
@@ -26,6 +28,7 @@ const Review = ({ reviewUser }) => {
         </p>
       </div>
     </div>
+    </Fade>
   );
 };
 
