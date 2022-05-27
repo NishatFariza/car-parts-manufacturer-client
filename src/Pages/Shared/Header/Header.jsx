@@ -37,7 +37,7 @@ const Header = () => {
           </label>
           <Link to="/">
             <div className={styles.logoWrapper}>
-              <img className="md:w-4/12 w-4/12  " src={logo} alt="" />
+              <img className="lg:w-4/12 w-6/12  " src={logo} alt="" />
             </div>
           </Link>
 
@@ -170,9 +170,9 @@ export default Header;
 
 // All Style Object Here====>>
 const styles = {
-  header: "bg-gray-50 relative border-b bg-white z-20 pt-2 w-full px-12",
+  header: "bg-gray-50 relative border-b bg-white z-20 pt-2 w-full lg:px-12",
   nav: "flex items-center justify-between py-3",
-  logoWrapper: "flex justify-start items-center text-orange-600 cursor-pointer",
+  logoWrapper: "flex lg:justify-start justify-center items-center cursor-pointer",
 
   navWrapper: "flex items-center justify-end border-l lg:border-l-0",
   hambager:
@@ -181,7 +181,7 @@ const styles = {
     "peer-checked:translate-x-0 fixed inset-0 w-[calc(100%-3.5rem)] translate-x-[-100%] bg-white border-r shadow-xl transition duration-200 lg:border-r-0 lg:w-auto lg:static lg:shadow-none lg:translate-x-0 sm:mt-11 lg:mt-0",
   navigationWrapper:
     "flex flex-col h-full justify-between lg:items-center lg:flex-row",
-  Ul: "px-6 pt-4 text-gray-700 space-y-5 md:px-12 lg:space-y-0 lg:flex lg:space-x-12 lg:pt-0",
+  Ul: "px-6 pt-4 mt-16 lg:mt-0 md:mt-0 text-gray-700 space-y-5 md:px-12 lg:space-y-0 lg:flex lg:space-x-12 lg:pt-0",
   link: "group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 ",
   menu: "relative hover:text-yellow-800 text-black font-medium",
   // Login
