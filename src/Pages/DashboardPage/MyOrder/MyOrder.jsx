@@ -2,12 +2,14 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
 import { useQuery } from "react-query";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import axiosPrivate from "../../../Api/axiosPrivate";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 
 const MyOrder = () => {
+  const navigate = useNavigate();
   const [user, loading] = useAuthState(auth);
 
   const {
@@ -16,9 +18,7 @@ const MyOrder = () => {
     data: orders,
     refetch,
   } = useQuery("orders", () =>
-    axiosPrivate.get(
-      `https://salty-bayou-55799.herokuapp.com/orders/${user.email}`
-    )
+    axiosPrivate.get(`http://localhost:5000/orders/${user.email}`)
   );
   const handleDelete = (id, name) => {
     console.log(id);
@@ -34,7 +34,7 @@ const MyOrder = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axiosPrivate
-          .delete(`https://salty-bayou-55799.herokuapp.com/order/${id}`)
+          .delete(`http://localhost:5000/order/${id}`)
           .then((data) => {
             console.log(data.data);
             if (data.data.deletedCount > 0) {
@@ -96,7 +96,7 @@ const MyOrder = () => {
                     {order.quantity}
                   </td>
                   <td class="py-2 text-[13px] text-center sm:py-4">
-                    {!order.pay ? (
+                    {!order.paid ? (
                       <>
                         <button
                           onClick={() => handleDelete(order._id, order.name)}
@@ -104,12 +104,18 @@ const MyOrder = () => {
                         >
                           Cancel
                         </button>
-                        <button className="btn btn-xs text-white border-none">
+                        <button
+                          onClick={() => navigate(`/payment/${order._id}`)}
+                          className="btn btn-xs text-white border-none"
+                        >
                           Pay
                         </button>
                       </>
                     ) : (
-                      <p className="text-success">Paid</p>
+                      <>
+                        <p className="text-success">Paid, transId:</p>
+                        <p>{order.transectionId}</p>
+                      </>
                     )}
                   </td>
                 </tr>

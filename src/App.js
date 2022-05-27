@@ -17,6 +17,7 @@ import MyOrder from './Pages/DashboardPage/MyOrder/MyOrder';
 import MyProfile from './Pages/DashboardPage/MyProfile/MyProfile';
 import Home from './Pages/HomePage/Home/Home';
 import MyPortfolio from './Pages/MyPortfolioPage/MyPortfolio/MyPortfolio';
+import Payment from './Pages/Payment/Payment';
 import Purchase from './Pages/Purchase/Purchase';
 
 
@@ -68,6 +69,7 @@ function App() {
        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
        <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
        <Route path='/purchase/:id' element={<Purchase></Purchase>}></Route>
+       <Route path='/payment/:id' element={<Payment></Payment>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
      </Routes>
      <Footer></Footer>

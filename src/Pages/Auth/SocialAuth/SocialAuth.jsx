@@ -12,18 +12,16 @@ const SocialAuth = () => {
   let from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  const [token] = useToken(user);
-  console.log(token);
-  if (user) {
-    navigate("/");
-  }
 
+  const [token] = useToken(user);
+  // console.log(token);
   useEffect(() => {
-    if (user) {
+    if (token) {
       toast.success("LogIn Successful");
+
       navigate(from, { replace: true });
     }
-  }, [navigate, user, from]);
+  }, [token]);
 
   useEffect(() => {
     if (error) {

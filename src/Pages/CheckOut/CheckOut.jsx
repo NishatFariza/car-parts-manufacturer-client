@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axiosPrivate from "../../Api/axiosPrivate";
-import { CardElement, Elements, useElements, useStripe } from "../../src";
+import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import Loading from "../Shared/Loading/Loading";
 
 const CheckOut = ({ order }) => {
@@ -15,7 +15,7 @@ const CheckOut = ({ order }) => {
   // console.log(order);
 
   useEffect(() => {
-    fetch("https://shielded-waters-86658.herokuapp.com/create-payment-intent", {
+    fetch("http://localhost:5000/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -32,7 +32,6 @@ const CheckOut = ({ order }) => {
   }, []);
 
   const handleSubmit = async (event) => {
-    // Block native form submission.
     event.preventDefault();
 
     if (!stripe || !elements) {
@@ -86,7 +85,7 @@ const CheckOut = ({ order }) => {
       };
       axiosPrivate
         .patch(
-          `https://shielded-waters-86658.herokuapp.com/order/${order?._id}`,
+          `http://localhost:5000/order/${order?._id}`,
           payment
         )
         .then((data) => {

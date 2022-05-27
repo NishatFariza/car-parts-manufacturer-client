@@ -15,9 +15,7 @@ const MyProfile = () => {
     data: profile,
     refetch,
   } = useQuery("profile", () =>
-    axiosPrivate.get(
-      `https://salty-bayou-55799.herokuapp.com/profile/${user?.email}`
-    )
+    axiosPrivate.get(`http://localhost:5000/profile/${user?.email}`)
   );
   // console.log(error);
   if (isLoading || loading) {
@@ -42,10 +40,7 @@ const MyProfile = () => {
     };
 
     axiosPrivate
-      .put(
-        `https://salty-bayou-55799.herokuapp.com/profile/${user?.email}`,
-        updateProfile
-      )
+      .put(`http://localhost:5000/profile/${user?.email}`, updateProfile)
       .then((data) => {
         console.log(data.data);
         if ((data.data.matchedCount || data.data.upsertedCount) > 0) {

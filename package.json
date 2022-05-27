@@ -13,6 +13,7 @@
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "axios": "^0.27.2",
+    "build": "^0.1.4",
     "daisyui": "^2.15.0",
     "firebase": "^9.8.1",
     "font-awesome": "^4.7.0",
@@ -28,6 +29,7 @@
     "react-rating": "^2.0.5",
     "react-router-dom": "6",
     "react-scripts": "5.0.1",
+    "run": "^1.4.0",
     "sweetalert2": "^11.4.17",
     "web-vitals": "^2.1.0"
   },

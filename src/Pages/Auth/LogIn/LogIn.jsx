@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import useToken from "../../../useToken/useToken";
 import Loading from "../../Shared/Loading/Loading";
 import SocialAuth from "../SocialAuth/SocialAuth";
 
@@ -18,6 +19,7 @@ const LogIn = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
   // console.log(user);
+  
   const {
     register,
     formState: { errors },
@@ -25,18 +27,18 @@ const LogIn = () => {
     reset,
   } = useForm();
 
+
+  const [token] = useToken(user);
+  // console.log(token);
   useEffect(() => {
-    if (user) {
+    if (token) {
       toast.success("LogIn Successful");
 
       navigate(from, { replace: true });
     }
-  }, [user]);
+  }, [token]);
 
-  if (user) {
-    navigate("/");
-  }
-
+  
   useEffect(() => {
     if (error) {
       console.log(error.code);

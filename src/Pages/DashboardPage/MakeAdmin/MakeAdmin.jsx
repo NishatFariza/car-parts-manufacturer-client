@@ -11,9 +11,7 @@ const MakeAdmin = () => {
     error,
     data: users,
     refetch,
-  } = useQuery("users", () =>
-    axiosPrivate.get(`https://salty-bayou-55799.herokuapp.com/users`)
-  );
+  } = useQuery("users", () => axiosPrivate.get(`http://localhost:5000/users`));
   console.log(users?.data);
   console.log(error);
 
@@ -45,9 +43,7 @@ const MakeAdmin = () => {
             {users?.data?.map((user, i) => {
               const makeAdmin = () => {
                 axiosPrivate
-                  .put(
-                    `https://salty-bayou-55799.herokuapp.com/user/makeAdmin/${user?.email}`
-                  )
+                  .put(`http://localhost:5000/user/makeAdmin/${user?.email}`)
                   .then((data) => {
                     console.log(data.data);
                     if (data?.data.acknowledged) {
@@ -67,9 +63,7 @@ const MakeAdmin = () => {
 
               const deleteAdmin = () => {
                 axiosPrivate
-                  .put(
-                    `https://salty-bayou-55799.herokuapp.com/user/deleteAdmin/${user?.email}`
-                  )
+                  .put(`http://localhost:5000/user/deleteAdmin/${user?.email}`)
                   .then((data) => {
                     console.log(data.data);
                     if (data?.data.acknowledged) {

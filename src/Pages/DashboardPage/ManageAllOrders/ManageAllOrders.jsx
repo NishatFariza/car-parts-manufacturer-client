@@ -11,9 +11,26 @@ const ManageAllOrders = () => {
     data: orders,
     refetch,
   } = useQuery("orders", () =>
-    axiosPrivate.get("https://salty-bayou-55799.herokuapp.com/orders")
+    axiosPrivate.get("http://localhost:5000/orders")
   );
   console.log(orders);
+
+  const handleShip = (id, name) => {
+    // console.log(name);
+
+    axiosPrivate
+      .put(`http://localhost:5000/orderShip/${id}`)
+      .then((data) => {
+        console.log(data.data);
+        if (data?.data.acknowledged) {
+          toast.success(`${name} has been Successfully Shipped!`);
+          refetch();
+        }
+      })
+      .catch((error) => {
+        console.log(error.response);
+      });
+  };
 
   const handleDelete = (id, name) => {
     console.log(id);
@@ -29,7 +46,7 @@ const ManageAllOrders = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axiosPrivate
-          .delete(`https://salty-bayou-55799.herokuapp.com/order/${id}`)
+          .delete(`http://localhost:5000/order/${id}`)
           .then((data) => {
             console.log(data.data);
             if (data.data.deletedCount > 0) {
@@ -42,6 +59,7 @@ const ManageAllOrders = () => {
       }
     });
   };
+
   if (isLoading) {
     return <Loading></Loading>;
   }
@@ -91,17 +109,16 @@ const ManageAllOrders = () => {
                   <td class="py-2 text-[13px]  text-center sm:py-4">
                     ${order.unitPrice}
                   </td>
-                  <td class="py-2 text-[13px] text-center sm:py-4">
-                    <button
-                      onClick={() => handleDelete(order._id, order.name)}
-                      className="btn mr-1 btn-xs bg-primary text-white border-none"
-                    >
-                      Ship
-                    </button>
-                    <p className="text-success">Unpaid</p>
+
+                  <td class="py-2 text-[12px] sm:text-[13px] text-center sm:py-4">
+                    {!order.paid && <p className="text-red-500">Unpaid</p>}
+                    {!order.shipped && order.paid && (
+                      <p className="text-green-500">Pending</p>
+                    )}
+                    {order.shipped && <p className="text-green-700">Paid</p>}
                   </td>
-                  <td class="py-2 text-[13px] text-center sm:py-4">
-                    {!order.pay && (
+                  <td class="py-2 text-[12px] sm:text-[13px] text-center sm:py-4">
+                    {!order.paid && (
                       <button
                         onClick={() => handleDelete(order._id, order.name)}
                         className="btn mr-1 btn-xs bg-red-500 text-white border-none"
@@ -109,6 +126,16 @@ const ManageAllOrders = () => {
                         Cancel
                       </button>
                     )}
+
+                    {!order.shipped && order.paid && (
+                      <button
+                        onClick={() => handleShip(order._id, order.name)}
+                        className="btn mr-1 btn-xs bg-red-500 text-white border-none"
+                      >
+                        Ship
+                      </button>
+                    )}
+                    {order.shipped && <p className="text-green-700">Sipped</p>}
                   </td>
                 </tr>
               );

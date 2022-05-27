@@ -6,6 +6,7 @@ import Product from "../Product/Product";
 
 const Products = () => {
   const [products] = useProducts();
+  // console.log(products);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

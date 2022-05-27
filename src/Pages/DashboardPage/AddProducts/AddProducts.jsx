@@ -34,7 +34,7 @@ const AddProducts = () => {
           };
           //   console.log(product);
           axiosPrivate
-            .post(`https://salty-bayou-55799.herokuapp.com/product`, product)
+            .post(`http://localhost:5000/product`, product)
             .then((data) => {
               // console.log(data.data);
               if (data.data.success) {

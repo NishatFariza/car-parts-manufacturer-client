@@ -15,13 +15,11 @@ const Purchase = () => {
   const [user, loading] = useAuthState(auth);
 
   useEffect(() => {
-    axiosPrivate
-      .get(`https://salty-bayou-55799.herokuapp.com/product/${id}`)
-      .then((data) => {
-        setProduct(data.data);
-        setQuantity(data.data.quantity);
-        setPLoading(false);
-      });
+    axiosPrivate.get(`http://localhost:5000/product/${id}`).then((data) => {
+      setProduct(data.data);
+      setQuantity(data.data.quantity);
+      setPLoading(false);
+    });
   }, [id]);
 
   if (loading || pLoading) {
@@ -47,7 +45,7 @@ const Purchase = () => {
     };
     console.log(purchaseInfo);
     axiosPrivate
-      .post("https://salty-bayou-55799.herokuapp.com/orders", purchaseInfo)
+      .post("http://localhost:5000/orders", purchaseInfo)
       .then((data) => {
         if (data.data.insertedId) {
           toast.success(`${name} Order Successfully!`);

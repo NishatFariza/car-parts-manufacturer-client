@@ -9,9 +9,7 @@ const Reviews = () => {
     isLoading,
     refetch,
   } = useQuery("reviews", () =>
-    fetch(`https://salty-bayou-55799.herokuapp.com/reviews`).then((res) =>
-      res.json()
-    )
+    fetch(`http://localhost:5000/reviews`).then((res) => res.json())
   );
 
   if (isLoading) {

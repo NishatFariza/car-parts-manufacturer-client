@@ -26,15 +26,13 @@ const AddReview = () => {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN-MOxuRwldA5D6vQQM5-Cje2zSAUESGvewA&usqp=CAU",
     };
     // console.log(review);
-    axiosPrivate
-      .post(`https://salty-bayou-55799.herokuapp.com/reviews`, review)
-      .then((data) => {
-        console.log(data.data);
-        if (data.data.insertedId) {
-          reset();
-          toast.success(`Your Review Succesfully Posted`);
-        }
-      });
+    axiosPrivate.post(`http://localhost:5000/reviews`, review).then((data) => {
+      console.log(data.data);
+      if (data.data.insertedId) {
+        reset();
+        toast.success(`Your Review Succesfully Posted`);
+      }
+    });
   };
   if (loading) {
     return <Loading></Loading>;

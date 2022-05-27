@@ -9,6 +9,7 @@ import {
 import auth from "../../../firebase.init";
 import toast from "react-hot-toast";
 import Loading from "../../Shared/Loading/Loading";
+import useToken from "../../../useToken/useToken";
 
 const Register = () => {
   let location = useLocation();
@@ -25,16 +26,17 @@ const Register = () => {
   } = useForm();
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+  const [token] = useToken(user);
+  // console.log(token);
   useEffect(() => {
-    if (user) {
-      toast.success("SignUp Successful");
+    if (token) {
+      toast.success("LogIn Successful");
+
       navigate(from, { replace: true });
     }
-  }, [navigate, user, from]);
+  }, [token]);
 
-  if (user) {
-    navigate("/");
-  }
+ 
   useEffect(() => {
     if (error || updateError) {
       console.log(error.code);
