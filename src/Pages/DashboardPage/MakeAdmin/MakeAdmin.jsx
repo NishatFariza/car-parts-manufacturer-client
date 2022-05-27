@@ -25,18 +25,18 @@ const MakeAdmin = () => {
       <h5 className="lg:text-3xl text-xl mb-4 text-center font-bold  text-yellow-500">
         Make Admin
       </h5>
-      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" class="py-2  sm:py-3"></th>
-              <th scope="col" class="py-2 sm:py-3">
+              <th scope="col" className="py-2  sm:py-3"></th>
+              <th scope="col" className="py-2 sm:py-3">
                 user
               </th>
-              <th scope="col" class="py-2 sm:py-3 text-center">
+              <th scope="col" className="py-2 sm:py-3 text-center">
                 Author
               </th>
-              <th scope="col" class="py-2 sm:py-3 text-center">
+              <th scope="col" className="py-2 sm:py-3 text-center">
                 Action
               </th>
             </tr>
@@ -90,20 +90,20 @@ const MakeAdmin = () => {
               return (
                 <tr
                   key={user._id}
-                  class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700"
+                  className="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700"
                 >
                   <th
                     scope="row"
-                    class="px-3 sm:pr-0 sm:pl-8 py-2  sm:py-4 font-medium text-gray-900 dark:text-white whitespace-nowraptext-[13px]"
+                    className="px-3 sm:pr-0 sm:pl-8 py-2  sm:py-4 font-medium text-gray-900 dark:text-white whitespace-nowraptext-[13px]"
                   >
                     {i + 1}
                   </th>
-                  <td class="py-2 text-[13px] sm:py-4">{user.email}</td>
-                  <td class="py-2 text-[13px] sm:py-4 text-center">
+                  <td className="py-2 text-[13px] sm:py-4">{user.email}</td>
+                  <td className="py-2 text-[13px] sm:py-4 text-center">
                     {user?.roll !== "admin" && (
                       <button
                         onClick={makeAdmin}
-                        class="h-6 px-3 uppercase duration-500 bg-yellow-600 border-none hover:bg-green-600 rounded  text-white"
+                        className="h-6 px-3 uppercase duration-500 bg-yellow-600 border-none hover:bg-green-600 rounded  text-white"
                       >
                         Make Admin
                       </button>
@@ -111,9 +111,9 @@ const MakeAdmin = () => {
                   </td>
                   <td
                     onClick={deleteAdmin}
-                    class="py-2 text-[13px] sm:py-4 text-center"
+                    className="py-2 text-[13px] sm:py-4 text-center"
                   >
-                    <button class="h-6 px-3 uppercase bg-red-500 border-none duration-500  hover:bg-red-800 rounded text-white">
+                    <button className="h-6 px-3 uppercase bg-red-500 border-none duration-500  hover:bg-red-800 rounded text-white">
                       Delete Admin
                     </button>
                   </td>

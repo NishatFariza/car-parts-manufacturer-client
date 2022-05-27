@@ -6,7 +6,7 @@ const useToken = (user) => {
   useEffect(() => {
     if (user) {
       if (user) {
-        console.log(user?.user.email);
+        // console.log(user?.user.email);
         axios
           .put(
             `https://salty-bayou-55799.herokuapp.com/user/${user.user.email}`,
@@ -14,7 +14,7 @@ const useToken = (user) => {
           )
           .then((data) => {
             if (data.data.token) {
-              console.log(data.data.token);
+              // console.log(data.data.token);
               const token = data.data.token;
               setToken(token);
               localStorage.setItem("accessToken", token);

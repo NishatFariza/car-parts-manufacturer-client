@@ -19,14 +19,13 @@ const LogIn = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
   // console.log(user);
-  
+
   const {
     register,
     formState: { errors },
     handleSubmit,
     reset,
   } = useForm();
-
 
   const [token] = useToken(user);
   // console.log(token);
@@ -38,7 +37,6 @@ const LogIn = () => {
     }
   }, [token]);
 
-  
   useEffect(() => {
     if (error) {
       console.log(error.code);

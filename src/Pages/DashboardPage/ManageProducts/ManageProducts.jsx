@@ -51,21 +51,21 @@ const ManageProducts = () => {
       <h5 className="lg:text-3xl text-xl mb-4 text-center font-bold  text-yellow-500">
         Mange Product
       </h5>
-      <div class="relative  overflow-x-auto shadow-md sm:rounded-lg">
-        <table class="w-full text-sm text-center text-gray-500 dark:text-gray-400">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <div className="relative  overflow-x-auto shadow-md sm:rounded-lg">
+        <table className="w-full text-sm text-center text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" class="py-2  sm:py-3"></th>
-              <th scope="col" class="py-2  sm:py-3">
+              <th scope="col" className="py-2  sm:py-3"></th>
+              <th scope="col" className="py-2  sm:py-3">
                 Product Name
               </th>
-              <th scope="col" class="py-2 text-center sm:py-3">
+              <th scope="col" className="py-2 text-center sm:py-3">
                 Price
               </th>
-              <th scope="col" class="py-2 text-center sm:py-3">
+              <th scope="col" className="py-2 text-center sm:py-3">
                 Stock
               </th>
-              <th scope="col" class="py-2 text-center sm:py-3">
+              <th scope="col" className="py-2 text-center sm:py-3">
                 Action
               </th>
             </tr>
@@ -77,22 +77,24 @@ const ManageProducts = () => {
               return (
                 <tr
                   key={product._id}
-                  class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700"
+                  className="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700"
                 >
                   <th
                     scope="row"
-                    class="pl-3 pr-3 sm:pr-0 sm:pl-5 py-2  sm:py-4 font-medium text-gray-900 dark:text-white whitespace-nowraptext-[13px]"
+                    className="pl-3 pr-3 sm:pr-0 sm:pl-5 py-2  sm:py-4 font-medium text-gray-900 dark:text-white whitespace-nowraptext-[13px]"
                   >
                     {i + 1}
                   </th>
-                  <td class="py-2 w-60  text-[13px] sm:py-4">{product.name}</td>
-                  <td class="py-2 text-[13px]  text-center sm:py-4">
+                  <td className="py-2 w-60  text-[13px] sm:py-4">
+                    {product.name}
+                  </td>
+                  <td className="py-2 text-[13px]  text-center sm:py-4">
                     ${product.price}
                   </td>
-                  <td class="py-2 text-[13px] text-center sm:py-4">
+                  <td className="py-2 text-[13px] text-center sm:py-4">
                     {product.availableQuantity}
                   </td>
-                  <td class="py-2 text-[13px] text-center sm:py-4">
+                  <td className="py-2 text-[13px] text-center sm:py-4">
                     <button
                       onClick={() => handleDelete(product._id, product.name)}
                       className="btn mr-1 btn-xs bg-red-500 text-white duration-300 border-none"

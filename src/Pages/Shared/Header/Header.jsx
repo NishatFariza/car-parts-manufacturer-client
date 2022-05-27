@@ -172,7 +172,8 @@ export default Header;
 const styles = {
   header: "bg-gray-50 relative border-b bg-white z-20 pt-2 w-full lg:px-12",
   nav: "flex items-center justify-between py-3",
-  logoWrapper: "flex lg:justify-start justify-center items-center cursor-pointer",
+  logoWrapper:
+    "flex lg:justify-start justify-center items-center cursor-pointer",
 
   navWrapper: "flex items-center justify-end border-l lg:border-l-0",
   hambager:

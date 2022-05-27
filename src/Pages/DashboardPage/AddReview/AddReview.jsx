@@ -125,7 +125,7 @@ const AddReview = () => {
         </label>
 
         <input
-          class="border border-yellow-600 px-6 py-2 hover:bg-yellow-600 hover:text-black duration-500 mt-4 font-semibold text-stone-600  transition w-40 mx-auto text-center rounded-full cursor-pointer"
+          className="border border-yellow-600 px-6 py-2 hover:bg-yellow-600 hover:text-black duration-500 mt-4 font-semibold text-stone-600  transition w-40 mx-auto text-center rounded cursor-pointer"
           type={"submit"}
           value={"Post Review"}
         />

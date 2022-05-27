@@ -11,17 +11,23 @@ const Dashboard = () => {
   return (
     <div className="">
       <div className="bg-[url('https://i.ibb.co/Qj8JDbk/page-header-bg.webp')] bg-cover md:h-[40vh] h-[20vh] flex flex-col justify-center items-center">
-        <h3 className="text-white lg:text-5xl md:text-3xl text-xl">Dashboard</h3>
+        <h3 className="text-white lg:text-5xl md:text-3xl text-xl">
+          Dashboard
+        </h3>
       </div>
-      <div class="drawer drawer-mobile lg:mt-[64px] md:mt-[32px] Container ">
-        <input id="dashboard-drower" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content ">
+      <div className="drawer drawer-mobile lg:mt-[64px] md:mt-[32px] Container ">
+        <input
+          id="dashboard-drower"
+          type="checkbox"
+          className="drawer-toggle"
+        />
+        <div className="drawer-content ">
           {/* <!-- Page content here --> */}
           <Outlet />
         </div>
-        <div class="drawer-side">
-          <label for="dashboard-drower" class="drawer-overlay"></label>
-          <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+        <div className="drawer-side">
+          <label htmlFor="dashboard-drower" className="drawer-overlay"></label>
+          <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
             {/* <!-- Sidebar content here --> */}
 
             <li>

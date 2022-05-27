@@ -36,7 +36,6 @@ const Register = () => {
     }
   }, [token]);
 
- 
   useEffect(() => {
     if (error || updateError) {
       console.log(error.code);
