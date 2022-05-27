@@ -95,7 +95,7 @@ const ManageProducts = () => {
                   <td class="py-2 text-[13px] text-center sm:py-4">
                     <button
                       onClick={() => handleDelete(product._id, product.name)}
-                      className="btn mr-1 btn-xs bg-red-500 text-white border-none"
+                      className="btn mr-1 btn-xs bg-red-500 text-white duration-300 border-none"
                     >
                       Delete
                     </button>

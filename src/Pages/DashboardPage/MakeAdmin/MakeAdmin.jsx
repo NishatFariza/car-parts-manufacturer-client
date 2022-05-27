@@ -103,7 +103,7 @@ const MakeAdmin = () => {
                     {user?.roll !== "admin" && (
                       <button
                         onClick={makeAdmin}
-                        class="h-6 px-3 uppercase bg-green-400 border-none hover:bg-green-600 rounded-full text-white"
+                        class="h-6 px-3 uppercase duration-500 bg-yellow-600 border-none hover:bg-green-600 rounded  text-white"
                       >
                         Make Admin
                       </button>
@@ -113,7 +113,7 @@ const MakeAdmin = () => {
                     onClick={deleteAdmin}
                     class="py-2 text-[13px] sm:py-4 text-center"
                   >
-                    <button class="h-6 px-3 uppercase bg-red-500 border-none  hover:bg-red-800 rounded-full text-white">
+                    <button class="h-6 px-3 uppercase bg-red-500 border-none duration-500  hover:bg-red-800 rounded text-white">
                       Delete Admin
                     </button>
                   </td>

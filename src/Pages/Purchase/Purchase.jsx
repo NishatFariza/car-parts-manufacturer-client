@@ -105,7 +105,7 @@ const Purchase = () => {
                 required=""
                 readOnly
                 disabled
-                value={user.displayName}
+                value={user?.displayName}
               />
               <label
                 for="floating_password"
@@ -123,7 +123,7 @@ const Purchase = () => {
                 required=""
                 readOnly
                 disabled
-                value={user.email}
+                value={user?.email}
               />
               <label
                 for="floating_email"

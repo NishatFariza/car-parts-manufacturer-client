@@ -111,7 +111,7 @@ const ManageAllOrders = () => {
                   </td>
 
                   <td class="py-2 text-[12px] sm:text-[13px] text-center sm:py-4">
-                    {!order.paid && <p className="text-red-500">Unpaid</p>}
+                    {!order.paid && <p className="text-yellow-500">Unpaid</p>}
                     {!order.shipped && order.paid && (
                       <p className="text-green-500">Pending</p>
                     )}
@@ -121,7 +121,7 @@ const ManageAllOrders = () => {
                     {!order.paid && (
                       <button
                         onClick={() => handleDelete(order._id, order.name)}
-                        className="btn mr-1 btn-xs bg-red-500 text-white border-none"
+                        className="btn mr-1 btn-xs bg-yellow-500 text-white duration-300 border-none"
                       >
                         Cancel
                       </button>
@@ -130,7 +130,7 @@ const ManageAllOrders = () => {
                     {!order.shipped && order.paid && (
                       <button
                         onClick={() => handleShip(order._id, order.name)}
-                        className="btn mr-1 btn-xs bg-red-500 text-white border-none"
+                        className="btn mr-1 btn-xs bg-yellow-500 text-white duration-300 border-none"
                       >
                         Ship
                       </button>
