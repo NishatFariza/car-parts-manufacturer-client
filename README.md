@@ -1,9 +1,6 @@
 # Live Link : [https://facmaster-factory.web.app/]
 
-##
-
-
-
+##This is a full stack site Car Parts Manufacturer Website which means both client side and server site functionalities are added in this project.
 
 ### Client Site Tools and Technology:
 - React.js
@@ -13,7 +10,7 @@
 - React router dom
 - react-firebase-Hook
 - tailwind CSS
-- daisyUi (tailwind Farmework)
+- daisyUi (tailwind Framework)
 - JWT Token System
 
 ### Backend Tools and Technology:
@@ -23,5 +20,6 @@
 - Stripe Payment System
 - nodemon
 - Dotenv
+- Heroku
 
 
