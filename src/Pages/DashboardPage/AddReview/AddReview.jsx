@@ -23,16 +23,18 @@ const AddReview = () => {
       rating: data.rating,
       img:
         user?.photoURL ||
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN-MOxuRwldA5D6vQQM5-Cje2zSAUESGvewA&usqp=CAU",
+        "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
     };
     // console.log(review);
-    axiosPrivate.post(`http://localhost:5000/reviews`, review).then((data) => {
-      console.log(data.data);
-      if (data.data.insertedId) {
-        reset();
-        toast.success(`Your Review Succesfully Posted`);
-      }
-    });
+    axiosPrivate
+      .post(`https://salty-bayou-55799.herokuapp.com/reviews`, review)
+      .then((data) => {
+        console.log(data.data);
+        if (data.data.insertedId) {
+          reset();
+          toast.success(`Your Review Succesfully Posted`);
+        }
+      });
   };
   if (loading) {
     return <Loading></Loading>;

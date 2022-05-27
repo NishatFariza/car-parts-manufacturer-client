@@ -18,7 +18,9 @@ const MyOrder = () => {
     data: orders,
     refetch,
   } = useQuery("orders", () =>
-    axiosPrivate.get(`http://localhost:5000/orders/${user.email}`)
+    axiosPrivate.get(
+      `https://salty-bayou-55799.herokuapp.com/orders/${user.email}`
+    )
   );
   const handleDelete = (id, name) => {
     console.log(id);
@@ -34,7 +36,7 @@ const MyOrder = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axiosPrivate
-          .delete(`http://localhost:5000/order/${id}`)
+          .delete(`https://salty-bayou-55799.herokuapp.com/order/${id}`)
           .then((data) => {
             console.log(data.data);
             if (data.data.deletedCount > 0) {

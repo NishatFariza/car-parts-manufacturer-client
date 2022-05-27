@@ -19,7 +19,7 @@ const Payment = () => {
     data: order,
     refetch,
   } = useQuery("order", () =>
-    axiosPrivate.get(`http://localhost:5000/order/${id}`)
+    axiosPrivate.get(`https://salty-bayou-55799.herokuapp.com/order/${id}`)
   );
   // console.log(order);
   if (isLoading) {

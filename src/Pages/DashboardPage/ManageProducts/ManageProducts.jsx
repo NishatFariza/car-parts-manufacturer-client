@@ -12,7 +12,7 @@ const ManageProducts = () => {
     data: products,
     refetch,
   } = useQuery("products", () =>
-    axiosPrivate.get("http://localhost:5000/products")
+    axiosPrivate.get("https://salty-bayou-55799.herokuapp.com/products")
   );
 
   const handleDelete = (id, name) => {
@@ -29,7 +29,7 @@ const ManageProducts = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axiosPrivate
-          .delete(`http://localhost:5000/product/${id}`)
+          .delete(`https://salty-bayou-55799.herokuapp.com/product/${id}`)
           .then((data) => {
             // console.log(data.data);
             if (data.data.deletedCount > 0) {

@@ -15,7 +15,7 @@ const CheckOut = ({ order }) => {
   // console.log(order);
 
   useEffect(() => {
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://salty-bayou-55799.herokuapp.com/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -85,7 +85,7 @@ const CheckOut = ({ order }) => {
       };
       axiosPrivate
         .patch(
-          `http://localhost:5000/order/${order?._id}`,
+          `https://salty-bayou-55799.herokuapp.com/order/${order?._id}`,
           payment
         )
         .then((data) => {

@@ -9,7 +9,7 @@ const useToken = (user) => {
         console.log(user?.user.email);
         axios
           .put(
-            `http://localhost:5000/user/${user.user.email}`,
+            `https://salty-bayou-55799.herokuapp.com/user/${user.user.email}`,
             user?.user.email
           )
           .then((data) => {
