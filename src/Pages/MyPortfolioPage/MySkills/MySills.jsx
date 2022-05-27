@@ -15,7 +15,7 @@ import Fade from "react-reveal/Fade";
 
 const MySills = () => {
   return (
-    <div className="w-11/12 mx-auto lg:my-12 my-8">
+    <div className="w-11/12 mx-auto lg:my-12 my-12">
       <Fade top>
         <h3 className="lg:text-4xl text-2xl text-center font-bold">Skills</h3>
       </Fade>

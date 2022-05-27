@@ -24,6 +24,16 @@ const AboutMe = () => {
             efficient way. Try to keep myself with new technologies and learn
             that.
           </p>
+          <div className="lg:mt-4 mt-2">
+            <h4 className="lg:text-xl text-sm font-semibold">
+              Educational Background
+            </h4>
+            <p className="lg:text-base text-xs">
+              Master of Arts (MA):
+              <span className="font-bold"> Bengali Literature</span>
+            </p>
+            <p className="lg:text-base text-xs">National University-2019</p>
+          </div>
           <a href="https://github.com/NishatFariza" target="_blank" alt="">
             <button className="border border-yellow-600 px-6 py-2 hover:bg-yellow-600 text-black duration-500 mt-6 transition w-30 mx-auto text-center rounded cursor-pointer">
               GIT HUB
